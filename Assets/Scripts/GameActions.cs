@@ -27,10 +27,6 @@ public class GameActions : MonoBehaviour
         if (UI.instance.reportTravelOnConversationEnd)
             UI.instance.OpenTravelUpdate();
 
-        // report crime (if applicable)
-        if (UI.instance.reportCrimeOnConversationEnd)
-            UI.instance.OpenCrimeSolved(UI.instance.ReportedCrime);
-
         // open conclusion (if applicable)
         if (showEvent)
         {
@@ -219,12 +215,12 @@ public class GameActions : MonoBehaviour
 
     public void DeductCredits(double _amount)
     {
-        PlayerScene.instance.MainCharacter.DeductCredits((int)_amount);
+        PlayerScene.instance.MainCharacter.DeductMoney((int)_amount);
     }
 
     public void GainCredits(double _amount)
     {
-        PlayerScene.instance.MainCharacter.EarnCredits((int)_amount);
+        PlayerScene.instance.MainCharacter.EarnMoney((int)_amount);
     }
 
     public void ShowWeapon()
@@ -313,12 +309,7 @@ public class GameActions : MonoBehaviour
             if (child.GetComponent<NPC>() != null)
             {
                 if (child.GetComponent<NPC>().characterName == _name && child.GetComponent<NPC>().name != "NPC-Instantiate(Clone)")
-                {
                     child.GetComponent<NPC>().gameObject.SetActive(false);
-
-                    if (child.GetComponent<NPC>().GetComponent<TriggerCrime>() != null && child.GetComponent<NPC>().GetComponent<TriggerCrime>().CrimeBox != null)
-                        child.GetComponent<NPC>().GetComponent<TriggerCrime>().CrimeBox.Destroy();
-                }
             }
         }
         // -----------------------------
@@ -364,14 +355,6 @@ public class GameActions : MonoBehaviour
         // activate travel nodes
         if (_Item.GetComponent<ActivateTravelNode>() != null)
             _Item.GetComponent<ActivateTravelNode>().ActivateNode();
-    }
-
-    public void Crime(string _name)
-    {
-        NPC _NPC = DialogueManager.currentConversant.GetComponent<NPC>();
-
-        if (_NPC.GetComponent<Crime>() != null)
-            _NPC.GetComponent<Crime>().RollCrimeConviction(_name);
     }
 
 
@@ -458,7 +441,6 @@ public class GameActions : MonoBehaviour
 
         Lua.RegisterFunction("OpenVendor", this, SymbolExtensions.GetMethodInfo(() => OpenVendor()));
         Lua.RegisterFunction("OpenDoor", this, SymbolExtensions.GetMethodInfo(() => OpenDoor()));
-        Lua.RegisterFunction("Crime", this, SymbolExtensions.GetMethodInfo(() => Crime(string.Empty)));
 
         Lua.RegisterFunction("StartQuest", this, SymbolExtensions.GetMethodInfo(() => StartQuest(string.Empty)));
         Lua.RegisterFunction("EndQuest", this, SymbolExtensions.GetMethodInfo(() => EndQuest(string.Empty)));

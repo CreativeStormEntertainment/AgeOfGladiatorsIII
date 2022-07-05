@@ -19,7 +19,6 @@ public class UI : MonoBehaviour
     public MissionBox MissionBox;
     public LevelBox LevelBox;
     public UpdateBox UpdateBox;
-    public UpdateBox CrimeBox;
     public UtilityBox UtilitySlider;
     public SmallBox SmallBox;
 
@@ -31,17 +30,12 @@ public class UI : MonoBehaviour
     public TravelWindow TravelScreen;
     public CraftWindow CraftScreen;
     public CharacterWindow CharacterScreen;
-    public CrimeTerminalWindow CrimeTerminalScreen;
     public ConclusionWindow ConclusionScreen;
     public CombatUI CombatUI;
 
     [Header("Quest System")]
     public MissionBox QuestBox;
     public PixelCrushers.DialogueSystem.QuestLogWindow QuestLogWindow;
-
-    [Header("Crime")]
-    public Crime ReportedCrime;
-    public bool reportCrimeOnConversationEnd;
 
     [Header("Other")]
     public GameObject SpeechBubbles;
@@ -77,7 +71,6 @@ public class UI : MonoBehaviour
 
         LevelBox.gameObject.SetActive(false);
         UpdateBox.gameObject.SetActive(false);
-        CrimeBox.gameObject.SetActive(false);
         SmallBox.gameObject.SetActive(false);
 
         CombatUI.gameObject.SetActive(false);
@@ -85,14 +78,11 @@ public class UI : MonoBehaviour
         DemoLabel.gameObject.SetActive(false);
 
         StartCoroutine(ShowUtility());
-
-        //if (QuestLogWindow == null) 
-        //    QuestLogWindow = FindObjectOfType<PixelCrushers.DialogueSystem.QuestLogWindow>();
     }
 
     void Update()
     {
-        if (Dredd.instance.isLoading)
+        if (Master.instance.isLoading)
             return;
 
         if (activeUI)
@@ -101,7 +91,6 @@ public class UI : MonoBehaviour
 
 
 
-    //  enable/disable UI
     public void ActivateUI(bool _active)
     {
         activeUI = _active;
@@ -109,7 +98,6 @@ public class UI : MonoBehaviour
         miscObj.SetActive(_active);
     }
 
-    // reset ui on new game
     public void ResetUI()
     {
         instance = null;
@@ -118,7 +106,6 @@ public class UI : MonoBehaviour
 
 
 
-    // check keypresses
     void KeyPresses()
     {
         // -------------------------------------------------
@@ -210,7 +197,6 @@ public class UI : MonoBehaviour
         // -------------------------------------------------
     }
 
-    // reset all
     void ResetAll()
     {
         UtilitySlider.gameObject.SetActive(false);
@@ -223,13 +209,11 @@ public class UI : MonoBehaviour
         TravelScreen.gameObject.SetActive(false);
         CraftScreen.gameObject.SetActive(false);
         CharacterScreen.gameObject.SetActive(false);
-        CrimeTerminalScreen.gameObject.SetActive(false);
         ConclusionScreen.gameObject.SetActive(false);
     }
 
 
 
-    // show utility
     IEnumerator ShowUtility()
     {
         while (LoadingScreen.instance.LoadingImage.gameObject.activeSelf)
@@ -240,7 +224,6 @@ public class UI : MonoBehaviour
 
 
 
-    // open window
     void OpenWindow()
     {
         CloseTooltips();
@@ -252,7 +235,6 @@ public class UI : MonoBehaviour
         UISounds.instance.PlayWindowOpen();
     }
 
-    // close window
     void CloseWindow()
     {
         CloseTooltips();
@@ -269,7 +251,6 @@ public class UI : MonoBehaviour
 
 
 
-    // open inventory
     public void OpenInventory()
     {
         OpenWindow();
@@ -279,16 +260,12 @@ public class UI : MonoBehaviour
         InventoryScreen.gameObject.SetActive(true);
     }
 
-    // close inventory
     public void CloseInventory()
     {
         CloseWindow();
         InventoryScreen.gameObject.SetActive(false);
     }
 
-
-
-    // open inventory
     public void OpenJournal()
     {
         OpenWindow();
@@ -297,7 +274,6 @@ public class UI : MonoBehaviour
         QuestLogWindow.Open();
     }
 
-    // close inventory
     public void CloseJournal()
     {
         CloseWindow();
@@ -306,9 +282,6 @@ public class UI : MonoBehaviour
         QuestLogWindow.Close();
     }
 
-
-
-    // open map
     public void OpenMap()
     {
         OpenWindow();
@@ -316,7 +289,6 @@ public class UI : MonoBehaviour
         MapScreen.gameObject.SetActive(true);
     }
 
-    // close map
     public void CloseMap()
     {
         CloseWindow();
@@ -324,9 +296,6 @@ public class UI : MonoBehaviour
         MapScreen.gameObject.SetActive(false);
     }
 
-
-
-    // open travel
     public void OpenTravel()
     {
         characterDidNotTravel = true;
@@ -337,7 +306,6 @@ public class UI : MonoBehaviour
         TravelScreen.gameObject.SetActive(true);
     }
 
-    // close travel
     public void CloseTravel()
     {
         if (characterDidNotTravel)
@@ -350,9 +318,6 @@ public class UI : MonoBehaviour
         TravelScreen.gameObject.SetActive(false);
     }
 
-
-
-    // open craft
     public void OpenCraft()
     {
         OpenWindow();
@@ -360,33 +325,12 @@ public class UI : MonoBehaviour
         CraftScreen.gameObject.SetActive(true);
     }
 
-    // close craft
     public void CloseCraft()
     {
         CloseWindow();
         CraftScreen.gameObject.SetActive(false);
     }
 
-
-
-    // open crime terminal
-    public void OpenCrimeTerminal()
-    {
-        OpenWindow();
-        CrimeTerminalScreen.Populate();
-        CrimeTerminalScreen.gameObject.SetActive(true);
-    }
-
-    // close crime terminal
-    public void CloseCrimeTerminal()
-    {
-        CloseWindow();
-        CrimeTerminalScreen.gameObject.SetActive(false);
-    }
-
-
-
-    // open character
     public void OpenCharacter()
     {
         OpenWindow();
@@ -394,17 +338,12 @@ public class UI : MonoBehaviour
         CharacterScreen.gameObject.SetActive(true);
     }
 
-    // close craft
     public void CloseCharacter()
     {
         CloseWindow();
         CharacterScreen.gameObject.SetActive(false);
     }
 
-
-
-
-    // open vendor
     public void OpenVendor(int _vendorNumber)
     {
         OpenWindow();
@@ -414,7 +353,6 @@ public class UI : MonoBehaviour
         VendorScreen.gameObject.SetActive(true);
     }
 
-    // close vendor
     public void CloseVendor()
     {
         CloseWindow();
@@ -423,7 +361,6 @@ public class UI : MonoBehaviour
 
 
 
-    // open loot (container)
     public void OpenLoot(MapItemContainer _Container)
     {
         if (_Container == null)
@@ -438,7 +375,6 @@ public class UI : MonoBehaviour
         LootScreen.gameObject.SetActive(true);
     }
 
-    // close loot
     public void CloseLoot()
     {
         CloseWindow();
@@ -448,13 +384,11 @@ public class UI : MonoBehaviour
 
 
 
-    // open mission box
     public void OpenQuestBox(string _quest, double _questEntry)
     {
         StartCoroutine(WaitToOpenQuestBox(_quest, _questEntry));
     }
 
-    // wait to open level box
     public IEnumerator WaitToOpenQuestBox(string _quest, double _questEntry)
     {
         while (Combat.instance.combatActivated || waitingForConclusion)
@@ -462,17 +396,15 @@ public class UI : MonoBehaviour
 
         QuestBox.gameObject.SetActive(true);
         QuestBox.Populate(_quest, _questEntry);
-        StartCoroutine("CloseQuestnBoxTimer");
+        StartCoroutine(CloseQuestBoxTimer());
     }
 
-    // closing timer
-    IEnumerator CloseQuestnBoxTimer()
+    IEnumerator CloseQuestBoxTimer()
     {
         yield return new WaitForSeconds(4);
         CloseQuestBox();
     }
 
-    // close mission box
     public void CloseQuestBox()
     {
         QuestBox.gameObject.SetActive(false);
@@ -480,14 +412,12 @@ public class UI : MonoBehaviour
 
 
 
-    // open menu
     public void OpenMenu()
     {
         OpenWindow();
         MenuScreen.gameObject.SetActive(true);
     }
 
-    // close menu
     public void CloseMenu()
     {
         CloseWindow();
@@ -496,7 +426,6 @@ public class UI : MonoBehaviour
 
 
 
-    // start conclusion timer
     public void StartConclusionTimer(string _name)
     {
         waitingForConclusion = true;
@@ -504,14 +433,12 @@ public class UI : MonoBehaviour
         StartCoroutine(OpenConclusionTimer(_name));
     }
 
-    // conclusion timer
     public IEnumerator OpenConclusionTimer(string _name)
     {
         yield return new WaitForSeconds(1f);
         OpenConclusion(_name);
     }
 
-    // open conclusion
     public void OpenConclusion(string _name)
     {
         OpenWindow();
@@ -520,7 +447,6 @@ public class UI : MonoBehaviour
         ConclusionScreen.gameObject.SetActive(true);
     }
 
-    // close conclusion
     public void CloseConclusion()
     {
         waitingForConclusion = false;
@@ -538,21 +464,18 @@ public class UI : MonoBehaviour
 
 
 
-    // start end game timer
     public void StartEndGameTimer()
     {
         GameMusic.instance.FadeOutMusic(1f);
         StartCoroutine(OpenEndGameTimer());
     }
 
-    // end game timer
     public IEnumerator OpenEndGameTimer()
     {
         yield return new WaitForSeconds(1f);
         OpenEndGame();
     }
 
-    // open end game
     public void OpenEndGame()
     {
         OpenWindow();
@@ -561,7 +484,6 @@ public class UI : MonoBehaviour
         ConclusionScreen.gameObject.SetActive(true);
     }
 
-    // close end game
     public void CloseEndGame()
     {
         CloseWindow();
@@ -571,13 +493,11 @@ public class UI : MonoBehaviour
 
 
 
-    // open level
     public void OpenLevel()
     {
         StartCoroutine(WaitToOpenLevelBox());
     }
 
-    // wait to open level box
     public IEnumerator WaitToOpenLevelBox()
     {
         yield return new WaitForSeconds(2.5f);
@@ -595,7 +515,8 @@ public class UI : MonoBehaviour
         StartCoroutine(LevelBox.CloseLevelBox());
     }
 
-    // open rank
+
+
     public void OpenRank()
     {
         UpdateBox.gameObject.SetActive(false);
@@ -605,7 +526,6 @@ public class UI : MonoBehaviour
 
 
 
-    // open rank (box)
     public void OpenTravelUpdate()
     {
         UpdateBox.gameObject.SetActive(false);
@@ -613,15 +533,6 @@ public class UI : MonoBehaviour
         UpdateBox.gameObject.SetActive(true);
     }
 
-    // open crime solved (box)
-    public void OpenCrimeSolved(Crime _Crime)
-    {
-        CrimeBox.gameObject.SetActive(false);
-        CrimeBox.PopulateCrime(_Crime);
-        CrimeBox.gameObject.SetActive(true);
-    }
-
-    // open crime solved (box)
     public void OpenSmallBox(string _label)
     {
         SmallBox.gameObject.SetActive(false);
@@ -631,7 +542,6 @@ public class UI : MonoBehaviour
 
 
 
-    // open utility
     public void OpenUtility()
     {
         UtilitySlider.gameObject.SetActive(false);
@@ -641,7 +551,6 @@ public class UI : MonoBehaviour
 
 
 
-    // open end demo message
     public void OpenEndDemoMessage()
     {
         DemoLabel.gameObject.SetActive(true);
@@ -649,7 +558,6 @@ public class UI : MonoBehaviour
 
 
 
-    // close all tooltips
     void CloseTooltips()
     {
         GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
@@ -664,9 +572,10 @@ public class UI : MonoBehaviour
         }
     }
 
-    // reset character from travel window close (without travelling)
     public void ResetCharacter()
     {
+        // reset character from travel window close (without travelling)
+
         GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
 
         foreach (GameObject _object in allObjects)
@@ -681,7 +590,6 @@ public class UI : MonoBehaviour
 
 
 
-    // hightlight from alt
     void HighlightAll()
     {
         // --------------------------

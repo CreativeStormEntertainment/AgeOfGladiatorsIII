@@ -44,7 +44,7 @@ public class TriggerActions : DialogueSystemTrigger
     {
         base.OnTriggerEnter(other);
 
-        if (Combat.instance.combatActivated || Dredd.instance == null)
+        if (Combat.instance.combatActivated || Master.instance == null)
             return;
 
         if (other.tag == "Player") // called here for now until can figure out proper use with dropdown

@@ -28,7 +28,6 @@ public class PersistentDataManager : MonoBehaviour
 
 
 
-
     // inital storage/addition of npc data to here
     public void StoreNPCsOnAwake(Map _Map)
     {
@@ -47,7 +46,6 @@ public class PersistentDataManager : MonoBehaviour
         }
     }
 
-    // instantiate (npc)
     public void InstantiateNPC(NPC _Original)
     {
         // instantiate prefab
@@ -58,13 +56,10 @@ public class PersistentDataManager : MonoBehaviour
         NPC _New = _npcPrefab.GetComponent<NPC>();
         _New.TransferSettingsToNPC(_Original);
 
-        // copy over crime
-        TransferNPCOtherSettings(_New, _Original);
 
         NPCList.Add(_New);
     }
 
-    // update npcs (enter)
     public void UpdateNPCsOnEnterMap(Map _Map)
     {
         // update map npcs with with persistent list data
@@ -73,11 +68,9 @@ public class PersistentDataManager : MonoBehaviour
             NPC _mapNPC = child.GetComponent<NPC>();
             NPC _listNPC = NPCList.Where(obj => obj.npcID == _mapNPC.npcID).SingleOrDefault();
             _mapNPC.TransferSettingsToNPC(_listNPC);
-            TransferNPCOtherSettings(_mapNPC, _listNPC);
         }
     }
 
-    // update npcs (exit)
     public void UpdateNPCsOnExitMap(Map _Map)
     {
         // update persistent list with map npc data
@@ -86,18 +79,7 @@ public class PersistentDataManager : MonoBehaviour
             NPC _mapNPC = child.GetComponent<NPC>();
             NPC _listNPC = NPCList.Where(obj => obj.npcID == _mapNPC.npcID).SingleOrDefault();
             _listNPC.TransferSettingsToNPC(_mapNPC);
-            TransferNPCOtherSettings(_listNPC, _mapNPC);
         }
-    }
-
-    // transfer settings
-    public void TransferNPCOtherSettings(NPC _Recieving, NPC _Incoming)
-    {
-        // ------------------------------
-        // crime
-        if (_Incoming.GetComponent<Crime>() != null)
-            _Recieving.GetComponent<NPC>().TransferCrimeSettings(_Incoming);
-        // ------------------------------
     }
 
 
@@ -122,7 +104,6 @@ public class PersistentDataManager : MonoBehaviour
         }
     }
 
-    // instantiate (map item)
     public void InstantiateMapItem(MapItem _Original)
     {
         // -----------------------------------------
@@ -162,7 +143,6 @@ public class PersistentDataManager : MonoBehaviour
         // -----------------------------------------
     }
 
-    // update map (enter)
     public void UpdateMapItemsOnEnterMap(Map _Map)
     {
         foreach (Transform child in _Map.MapItems.transform)
@@ -178,7 +158,6 @@ public class PersistentDataManager : MonoBehaviour
         }
     }
 
-    // update map (exit)
     public void UpdateMapItemsOnExitMap(Map _Map)
     {
         // ----------------------------------------------------
@@ -197,7 +176,6 @@ public class PersistentDataManager : MonoBehaviour
         // ----------------------------------------------------
     }
 
-    // transfer settings
     public void TransferMapItemSettings(MapItem _Recieving, MapItem _Incoming)
     {
         // active state

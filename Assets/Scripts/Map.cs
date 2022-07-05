@@ -124,7 +124,8 @@ public class Map : MonoBehaviour
         }
     }
 
-    // update all doors
+
+
     public void UpdateAllDoors()
     {
         foreach (Transform child in MapItems.transform)
@@ -134,7 +135,6 @@ public class Map : MonoBehaviour
         }
     }
 
-    // update all npcs
     public void UpdateAllNPCEquipment()
     {
         foreach (Transform child in MapNPCS.transform)
@@ -149,7 +149,6 @@ public class Map : MonoBehaviour
         }
     }
 
-    // update player animator
     public void UpdatePlayerAnimator()
     {
         // this needs to be here to attach male or female animator

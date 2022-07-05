@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    // back to menu
     public void BackToMenu()
     {
         GameMusic.instance.FadeOutMusic(1f);
@@ -13,10 +12,9 @@ public class Menu : MonoBehaviour
         //SceneManager.LoadScene("Screen-Start");
         DestroyScenes();
 
-        SceneManager.LoadScene("Dredd");
+        SceneManager.LoadScene("Master");
     }
 
-    // quit game
     public void QuitGame()
     {
         Application.Quit();
@@ -24,10 +22,9 @@ public class Menu : MonoBehaviour
 
 
 
-    // destroy open scenes
     void DestroyScenes()
     {
-        Dredd.instance.ResetDredd();
+        Master.instance.ResetMaster();
         UI.instance.ResetUI();
         PlayerScene.instance.ResetPlayer();
     }

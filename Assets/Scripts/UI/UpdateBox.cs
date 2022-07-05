@@ -13,7 +13,6 @@ public class UpdateBox : MonoBehaviour
 
 
 
-    // populate
     public void Populate(string _header, string _label)
     {
         Header.text = _header;
@@ -21,24 +20,14 @@ public class UpdateBox : MonoBehaviour
         LevelLabel.gameObject.SetActive(false);
     }
 
-    // populate (rank)
+
+
     public void PopulateRank()
     {
         Header.text = ("New rank achieved!\n" + PlayerScene.instance.MainCharacter.GetRankLabel()).ToUpper();
         Label.text = "Report back to sector house".ToUpper();
     }
 
-    // populate (rank)
-    public void PopulateCrime(Crime _Crime)
-    {
-        Portrait.sprite = PortraitSelector.FindPortrait(_Crime.Criminal, 1);
-        Header.text = ("Crime Prosecuted!\n" + _Crime.crimeName).ToUpper();
-        Label.text = "Report back to crime terminal".ToUpper();
-
-        UI.instance.reportCrimeOnConversationEnd = false;
-    }
-
-    // populate (travel)
     public void PopulateTravel()
     {
         Header.text = ("Travel Location \n<color=#ffc149>Unlocked</color>").ToUpper();

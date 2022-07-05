@@ -9,7 +9,6 @@ public static class Inventory
 
 
 
-    // add to inventory
     public static void AddToInventory(Item _Item)
     {
         InventoryList.Add(_Item);
@@ -19,7 +18,6 @@ public static class Inventory
             CheckIfMissionItem(_Item as MissionItem);
     }
 
-    // remove from inventory
     public static void RemoveFromInventory(Item _Item)
     {
         InventoryList.Remove(_Item);
@@ -27,7 +25,6 @@ public static class Inventory
 
 
 
-    // check if mission item
     static void CheckIfMissionItem(MissionItem _Item)
     {
         // advance quest
@@ -39,7 +36,8 @@ public static class Inventory
             GameActions.instance.StartQuest(_Item.questName);
     }
 
-    // check if inventory contains quest item
+
+
     public static bool CheckIfInventoryContainsQuestItem(string _questName, int _questEntry)
     {
         bool _itemPresent = false;

@@ -14,7 +14,6 @@ public class ConclusionWindow : MonoBehaviour
 
 
 
-    // populate (conversation)
     public void Populate(string _name)
     {
         GameMusicCues.instance.PlayMusicCue(MusicCues.MissionAdvance);
@@ -28,7 +27,6 @@ public class ConclusionWindow : MonoBehaviour
         ConcludeButton.onClick.AddListener(() => UI.instance.CloseConclusion());
     }
 
-    // populate (end game)
     public void PopulateEndGame()
     {
         ConclusionImage.sprite = EventImages.instance.EventSprites[0];
@@ -42,7 +40,6 @@ public class ConclusionWindow : MonoBehaviour
 
 
 
-    // event text
     public string EventText(string _name)
     {
         string _text = "";
@@ -100,24 +97,19 @@ public class ConclusionWindow : MonoBehaviour
 
 
 
-    // close (conversation)
     public void Close()
     {
         GameActions.instance.CleanAfterEventScreen(GameActions.instance.eventName);
     }
 
-    // close (end game)
     public void CloseEndGame()
     {
         GameMusic.instance.FadeOutMusic(1f);
 
-        //SceneManager.LoadScene("Screen-Start");
-        //Destroy(GameObject.Find("Player")); // do not rename these!
-
-        Dredd.instance.ResetDredd();
+        Master.instance.ResetMaster();
         UI.instance.ResetUI();
         PlayerScene.instance.ResetPlayer();
 
-        SceneManager.LoadScene("Dredd");
+        SceneManager.LoadScene("Master");
     }
 }

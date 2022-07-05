@@ -43,7 +43,7 @@ public class PlayerCharacterMovement : Movement
 
     void Update()
     {
-        if (Dredd.instance.isLoading)
+        if (Master.instance.isLoading)
             return;
 
         DetectMouseTargetItem();
@@ -284,10 +284,6 @@ public class PlayerCharacterMovement : Movement
                     // crafting station
                     if (ItemForInteraction.GetComponentInParent<CraftingStation>() != null)
                         UI.instance.OpenCraft();
-
-                    // crime terminal
-                    if (ItemForInteraction.GetComponentInParent<CrimeTerminal>() != null)
-                        UI.instance.OpenCrimeTerminal();
 
                     // viewable item
                     if (ItemForInteraction.GetComponentInParent<ViewItemActivator>() != null)

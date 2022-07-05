@@ -22,7 +22,6 @@ public class MissionItem : Item
 
 
 
-    // get portrait (override)
     public override Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = PortraitImages.instance.MissionItemPortraits[itemNumber];
@@ -30,7 +29,6 @@ public class MissionItem : Item
         return _ItemPortrait;
     }
 
-    // get item name (override)
     public override string GetItemName()
     {
         string _name = "";
@@ -51,7 +49,6 @@ public class MissionItem : Item
         return _name;
     }
 
-    // calculate cost (override)
     public override int CalculateCost()
     {
         int _cost = 1000;

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Dredd.unity
+    path: Assets/Scenes/Master.unity
     guid: b3685094e91fa054f84dfb00663a925d
   - enabled: 1
     path: Assets/Scenes/Screen-Start.unity
@@ -28,5 +28,5 @@ EditorBuildSettings:
     guid: d6989e5a8f031364ba3f42571aa97f79
   - enabled: 1
     path: Assets/Scenes/Map-Street.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    guid: 9eccade191b8f7e4087c612003e9b6eb
   m_configObjects: {}

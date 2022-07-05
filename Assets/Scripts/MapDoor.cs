@@ -19,7 +19,6 @@ public class MapDoor : MonoBehaviour
 
 
 
-    // open door
     public void OpenDoor()
     {
         // do not proceed if door locked
@@ -40,14 +39,12 @@ public class MapDoor : MonoBehaviour
         Cursor.SetCursor(null, Vector3.zero, CursorMode.Auto);
     }
 
-    // play animation
     public void PlayAnimation()
     {
         if (AttachedAnimation != null)
             AttachedAnimation.Play();
     }
 
-    // hide doors
     public IEnumerator HideDoor()
     {
         yield return new WaitForSeconds(AttachedAnimation.clip.length);

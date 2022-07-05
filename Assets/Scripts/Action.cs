@@ -11,7 +11,6 @@ public class Action
 
 
 
-    // constructor
     public Action(CombatActions _ActionType)
     {
         ActionType = _ActionType;
@@ -21,7 +20,6 @@ public class Action
 
 
 
-    // special 
     public void AddSpecialConditions()
     {
         switch (ActionType)
@@ -32,9 +30,6 @@ public class Action
         }
     }
 
-
-
-    // cooldown countdown
     public void CooldownCountdown()
     {
         if (cooldown > 0)
@@ -43,7 +38,7 @@ public class Action
 
 
 
-    // check reload
+    // reload
     public bool CheckReload()
     {
         bool _available = true;
@@ -59,7 +54,6 @@ public class Action
         return _available;
     }
 
-    // reload animation
     public IEnumerator ReloadAnimation()
     {
         // report
@@ -86,7 +80,6 @@ public class Action
        Reload();
     }
 
-    // reload
     void Reload()
     {
         // reload
@@ -100,9 +93,6 @@ public class Action
         Combat.instance.waitingForActionToFinish = false;
     }
 
-
-
-    // reload animation (out of combat)
     public IEnumerator ReloadAnimationOutOfCombat()
     {
         // report
@@ -128,7 +118,6 @@ public class Action
         ReloadOutCombat();
     }
 
-    // reload (out of combat)
     void ReloadOutCombat()
     {
         // reload
@@ -137,7 +126,7 @@ public class Action
 
 
 
-    // check heal
+    // heal
     public bool CheckHeal()
     {
         bool _available = true;
@@ -157,7 +146,6 @@ public class Action
         return _available;
     }
 
-    // heal animation
     public IEnumerator HealAnimation()
     {
         CombatSounds.instance.PlayHeal();
@@ -169,7 +157,6 @@ public class Action
         Heal();
     }
 
-    // heal
     void Heal()
     {
         // report
@@ -192,7 +179,7 @@ public class Action
 
 
 
-    // check stun
+    // stun
     public bool CheckStun()
     {
         bool _available = true;
@@ -212,7 +199,6 @@ public class Action
         return _available;
     }
 
-    // activate stun
     public void ActivateStun()
     {
         CombatSounds.instance.PlayReload();
@@ -225,7 +211,6 @@ public class Action
             Combat.instance.Attacking.StartCoroutine(Combat.instance.Attacking.GetComponent<ActionTextActivator>().ReportOther("Concussion Round Deactivated"));
     }
 
-    // stun target
     public void Stun()
     {
         Debug.Log(Combat.instance.round + ": " + Combat.instance.Defending.characterName + " Stunned");
@@ -254,7 +239,7 @@ public class Action
 
 
 
-    // check hit bonus
+    // hit bonus
     public bool CheckHitBonus()
     {
         bool _available = true;
@@ -274,7 +259,6 @@ public class Action
         return _available;
     }
 
-    // activate hit bonus
     public void ActivateHitBonus()
     {
         CombatSounds.instance.PlayReload();
@@ -291,7 +275,7 @@ public class Action
 
 
 
-    // check critical bonus
+    // critical bonus
     public bool CheckCriticalBonus()
     {
         bool _available = true;
@@ -311,7 +295,6 @@ public class Action
         return _available;
     }
 
-    // activate critical bonus
     public void ActivateCriticalBonus()
     {
         CombatSounds.instance.PlayReload();

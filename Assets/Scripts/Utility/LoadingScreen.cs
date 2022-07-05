@@ -36,6 +36,8 @@ public class LoadingScreen : MonoBehaviour
         Map.OnLoad -= OnSceneLoaded;
     }
 
+
+
     public void ChooseLoadingScreen()
     {
         LoadingImage.sprite = UISprites.instance.LoadingImages[loadingIndex];
@@ -61,6 +63,8 @@ public class LoadingScreen : MonoBehaviour
         if (loadingIndex >= UISprites.instance.LoadingImages.Count)
             loadingIndex = 0;
     }
+
+
 
     public void InitiateLoadingBar(AsyncOperation _async)
     {
@@ -158,7 +162,7 @@ public class LoadingScreen : MonoBehaviour
 
     private void ResetLoadingScreen()
     {
-        Dredd.instance.isLoading = false;
+        Master.instance.isLoading = false;
 
         LoadingImage.gameObject.SetActive(false);
 

@@ -9,7 +9,6 @@ public class MapItem : MonoBehaviour
 
 
 
-    // transfer container settings
     public void TransferContainerSettings(MapItemContainer _incoming)
     {
         if (GetComponent<MapItemContainer>() == null)
@@ -22,7 +21,6 @@ public class MapItem : MonoBehaviour
         GetComponent<MapItemContainer>().ContainedItems = _incoming.ContainedItems;
     }
 
-    // transfer door settings
     public void TransferDoorSettings(MapDoor _incoming)
     {
         if (GetComponent<MapDoor>() == null)
@@ -31,14 +29,12 @@ public class MapItem : MonoBehaviour
         GetComponent<MapDoor>().doorOpen = _incoming.doorOpen;
     }
 
-    // transfer view settings
     public void TransferViewSettings(TriggerViewItem _incoming)
     {
         if (GetComponent<TriggerViewItem>() == null)
             gameObject.AddComponent<TriggerViewItem>();
     }
 
-    // transfer perception settings
     public void TransferPerceptionSettings(TriggerPerception _incoming)
     {
         if (GetComponent<TriggerPerception>() == null)
@@ -47,7 +43,6 @@ public class MapItem : MonoBehaviour
         GetComponent<TriggerPerception>().alreadyDiscovered = _incoming.alreadyDiscovered;
     }
 
-    // transfer stat roll settings
     public void TransferStatRollSettings(TriggerSkillRoll _incoming)
     {
         if (GetComponent<TriggerSkillRoll>() == null)

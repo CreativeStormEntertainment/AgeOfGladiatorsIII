@@ -27,7 +27,7 @@ public static class SceneSwitch
 
     public static void SceneSwitcherAsync(string _name, int _nodeNumber)
     {
-        Dredd.instance.isLoading = true;
+        Master.instance.isLoading = true;
 
         entryNode = _nodeNumber;
 
@@ -36,7 +36,7 @@ public static class SceneSwitch
 
     public static void SceneSwitcherAsync(string _name)
     {
-        Dredd.instance.isLoading = true;
+        Master.instance.isLoading = true;
 
         AsyncLoading(_name);
     }
@@ -55,7 +55,7 @@ public static class SceneSwitch
 
     public static void SceneSwitcherStartGameAsync(string _name, int _nodeNumber)
     {
-        Dredd.instance.isLoading = true;
+        Master.instance.isLoading = true;
 
         entryNode = _nodeNumber;
 

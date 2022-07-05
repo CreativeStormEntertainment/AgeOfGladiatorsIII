@@ -46,7 +46,6 @@ public class NPC : Character
 
 
 
-    // loot
     public void LootNPC()
     {
         if (!UI.instance.LootScreen.isActiveAndEnabled)
@@ -55,7 +54,6 @@ public class NPC : Character
 
 
 
-    // transfer npc settings
     public void TransferSettingsToNPC(NPC _incoming)
     {
         // active state
@@ -81,25 +79,6 @@ public class NPC : Character
         }
     }
 
-    // transfer crime settings
-    public void TransferCrimeSettings(NPC _incoming)
-    {
-        if (GetComponent<Crime>() == null)
-            gameObject.AddComponent<Crime>();
-
-        GetComponent<Crime>().CrimeType = _incoming.GetComponent<Crime>().CrimeType;
-        GetComponent<Crime>().CriminalConversant = _incoming.GetComponent<Crime>().CriminalConversant;
-        GetComponent<Crime>().CrimePunishment = _incoming.GetComponent<Crime>().CrimePunishment;
-        GetComponent<Crime>().crimeName = _incoming.GetComponent<Crime>().crimeName;
-        GetComponent<Crime>().criminalName = _incoming.GetComponent<Crime>().criminalName;
-        GetComponent<Crime>().crimeDescription = _incoming.GetComponent<Crime>().crimeDescription;
-        GetComponent<Crime>().crimeResolved = _incoming.GetComponent<Crime>().crimeResolved;
-        GetComponent<Crime>().crimeReputationGain = _incoming.GetComponent<Crime>().crimeReputationGain;
-    }
-
-
-
-    // set attributes
     public void SetAttributes()
     {
         int _stat = 4;

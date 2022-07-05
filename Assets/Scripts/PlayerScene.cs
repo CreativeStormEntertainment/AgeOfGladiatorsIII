@@ -36,7 +36,7 @@ public class PlayerScene : MonoBehaviour
     {
         // transfer from new character creation
         // will eventually need to put somewhere else due to save/load
-        MainCharacter.TransferSetting(Dredd.instance.NewCharacterTemporary);
+        MainCharacter.TransferSetting(Master.instance.NewCharacterTemporary);
 
         // activate proper model
         if (MainCharacter.male)

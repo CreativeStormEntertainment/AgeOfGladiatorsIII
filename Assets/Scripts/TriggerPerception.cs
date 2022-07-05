@@ -15,7 +15,7 @@ public class TriggerPerception : MonoBehaviour
 
     void Update()
     {
-        if (Dredd.instance == null)
+        if (Master.instance == null)
             return;
 
         PerceptionCheck();

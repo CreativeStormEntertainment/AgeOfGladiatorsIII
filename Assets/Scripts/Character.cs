@@ -141,7 +141,6 @@ public class Character : MonoBehaviour
 
 
 
-    // skill check
     public bool SkillCheck(Skill _Skill, int _skillLevel)
     {
         int _stat = GetSkill(_Skill);
@@ -152,7 +151,6 @@ public class Character : MonoBehaviour
             return true;
     }
 
-    // get skill
     public ref int GetSkill(Skill _Input)
     {
         ref int _stat = ref strength; // figure out something else here for initialization
@@ -217,7 +215,6 @@ public class Character : MonoBehaviour
         return ref _stat;
     }
 
-    // increase skill
     public void IncreaseSkill(Skill _Input)
     {
         ref int _skill = ref GetSkill(_Input);
@@ -226,7 +223,6 @@ public class Character : MonoBehaviour
         skillPoints -= CalculateSkillPointCost(_Input);
     }
 
-    // decrease skill
     public void DecreaseSkill(Skill _Input)
     {
         ref int _skill = ref GetSkill(_Input);
@@ -235,7 +231,6 @@ public class Character : MonoBehaviour
 
 
 
-    // get attribute
     public ref int GetAttribute(Attribute _Input)
     {
         ref int _attribute = ref strength; // figure out something else here for initialization
@@ -266,7 +261,6 @@ public class Character : MonoBehaviour
         return ref _attribute;
     }
 
-    // increase attribute
     public void IncreaseAttribute(Attribute _Input)
     {
         ref int _attribute = ref GetAttribute(_Input);
@@ -275,7 +269,6 @@ public class Character : MonoBehaviour
         attributePoints--;
     }
 
-    // decrease attribute
     public void DecreaseAttribute(Attribute _Input)
     {
         ref int _skill = ref GetAttribute(_Input);
@@ -284,7 +277,6 @@ public class Character : MonoBehaviour
 
 
 
-    // calculate health
     public int GetInitiative()
     {
         int _stat = 0;
@@ -294,7 +286,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate armor
     public int GetArmor()
     {
         int _stat = 0;
@@ -317,7 +308,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate health
     public int GetHealth()
     {
         int _stat = 0;
@@ -341,7 +331,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate melee damage (bonus)
     public int GetMeleeDamageBonus()
     {
         int _stat = 0;
@@ -355,7 +344,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate ranged damage (bonus)
     public int GetRangedDamageBonus()
     {
         int _stat = 0;
@@ -369,7 +357,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate hit chance
     public int GetHitChance()
     {
         int _stat = 0;
@@ -395,7 +382,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate critical chance
     public int GetCriticalChance()
     {
         int _stat = 0;
@@ -416,7 +402,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate critical damage
     public float GetCriticalDamage()
     {
         float _stat = 1;
@@ -431,7 +416,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate evasion chance
     public int GetEvasionChance()
     {
         int _stat = 0;
@@ -451,7 +435,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate penetration
     public int GetPenetration()
     {
         int _stat = 0;
@@ -470,7 +453,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate movement points
     public int GetMovementPoints()
     {
         int _stat = 3;
@@ -495,7 +477,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate action points
     public int GetActionPoints()
     {
         int _stat = 2;
@@ -522,7 +503,6 @@ public class Character : MonoBehaviour
 
 
 
-    // calculate attack damage
     public int CalculateAttackDamage()
     {
         int _damage = 0;
@@ -542,7 +522,6 @@ public class Character : MonoBehaviour
         return _damage;
     }
 
-    // calculate melee damage (min)
     public int GetMeleeMinimumDamage()
     {
         int _stat = 0;
@@ -555,7 +534,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate melee damage (max)
     public int GetMeleeMaximumDamage()
     {
         int _stat = 0;
@@ -568,7 +546,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate ranged damage (min)
     public int GetRangedMinimumDamage()
     {
         int _stat = 0;
@@ -581,7 +558,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate ranged damage (max)
     public int GetRangedMaximumDamage()
     {
         int _stat = 0;
@@ -594,7 +570,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate unarmed damage (min)
     public int GetUnarmedMinimumDamage()
     {
         int _stat = 30;
@@ -604,7 +579,6 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // calculate unarmed damage (max)
     public int GetUnarmedMaximumDamage()
     {
         int _stat = 40;
@@ -616,7 +590,7 @@ public class Character : MonoBehaviour
 
 
 
-    // calculate action points cost
+
     public int GetActionPointAttackCost()
     {
         int _cost = 2;
@@ -627,9 +601,27 @@ public class Character : MonoBehaviour
         return _cost;
     }
 
+    public void StunCharacter()
+    {
+        stunCountdown = GameData.stunDuration;
+        isStunned = true;
+    }
+
+    public void CountdownStun()
+    {
+        if (stunCountdown > 0)
+        {
+            stunCountdown--;
+
+            Debug.Log(Combat.instance.round + ": " + characterName + " stunned for " + stunCountdown);
+
+            if (stunCountdown == 0)
+                isStunned = false;
+        }
+    }
 
 
-    // stat difficulty adjustment
+
     public int DifficultyAdjustment(int _stat)
     {
         if (playerControlledCombat)
@@ -637,7 +629,7 @@ public class Character : MonoBehaviour
 
         int _percentage = 0;
 
-        switch (Dredd.instance.difficulty)
+        switch (Master.instance.difficulty)
         {
             case GameDifficulty.Easy:
                 _percentage = 40;
@@ -657,7 +649,6 @@ public class Character : MonoBehaviour
 
 
 
-    // gain experience
     public void GainExperience(int _incoming)
     {
         // intelligence bonus
@@ -678,7 +669,6 @@ public class Character : MonoBehaviour
             UISounds.instance.PlaySkillSucceed();
     }
 
-    // increase level
     public void IncreaseLevel()
     {
         level++;
@@ -697,7 +687,6 @@ public class Character : MonoBehaviour
             levelCounter = 0;
     }
 
-    // calculate skill points per level
     public int GetSkillPointsPerLevel()
     {
         int _stat = intelligence;
@@ -722,20 +711,17 @@ public class Character : MonoBehaviour
         return _stat;
     }
 
-    // increase skillpoints
     void IncreaseSkillPoints()
     {
         skillPoints += GetSkillPointsPerLevel();
     }
 
-    // increase attribute points
     void IncreaseAttributePoints()
     {
         if (levelCounter == 5)
             attributePoints += 1;
     }
 
-    // calculate skill cost
     public int CalculateSkillPointCost(Skill _Input)
     {
         int _cost = GetSkill(_Input);
@@ -745,7 +731,6 @@ public class Character : MonoBehaviour
 
 
 
-    // increase rank
     public void IncreaseRank()
     {
         if (GetComponent<PlayerCharacter>() != null)
@@ -758,7 +743,6 @@ public class Character : MonoBehaviour
         }
     }
 
-    // get rank label
     public string GetRankLabel()
     {
         string _rank = "";
@@ -784,7 +768,6 @@ public class Character : MonoBehaviour
 
 
 
-    // get combat style
     public WeaponTypes CombatStyle()
     {
         WeaponTypes _CombatStyle = WeaponTypes.Unarmed; // unarmed
@@ -818,9 +801,6 @@ public class Character : MonoBehaviour
         return _CombatStyle;
     }
 
-
-
-    // reset combat stats (round)
     public void ResetCombatStatsEachRound()
     {
         combatActionPoints = GetActionPoints();
@@ -829,7 +809,6 @@ public class Character : MonoBehaviour
 
 
 
-    // update equipment on model
     public void UpdateEquipmentOnModel()
     {
         // -----------------------------
@@ -848,31 +827,7 @@ public class Character : MonoBehaviour
 
 
 
-    // stun
-    public void StunCharacter()
-    {
-        stunCountdown = GameData.stunDuration;
-        isStunned = true;
-    }
-
-    // countdown stun
-    public void CountdownStun()
-    {
-        if (stunCountdown > 0)
-        {
-            stunCountdown--;
-
-            Debug.Log(Combat.instance.round + ": " + characterName + " stunned for " + stunCountdown);
-
-            if (stunCountdown == 0)
-                isStunned = false;
-        }
-    }
-
-
-
-    // deduct credits
-    public void DeductCredits(int _amount)
+    public void DeductMoney(int _amount)
     {
         credits -= _amount;
 
@@ -880,8 +835,7 @@ public class Character : MonoBehaviour
         UI.instance.OpenSmallBox(_report);
     }
 
-    // earn credits
-    public void EarnCredits(int _amount)
+    public void EarnMoney(int _amount)
     {
         credits += _amount;
 
@@ -891,7 +845,6 @@ public class Character : MonoBehaviour
 
 
 
-    // kill
     public void KillCharacter(int _deathType)
     {
         // do not kill if already dead
@@ -925,13 +878,6 @@ public class Character : MonoBehaviour
                 _Container = this.gameObject.AddComponent<MapItemContainer>();
                 _Container.SupplyContainer(this);
                 this.gameObject.GetComponent<AudioCue>().AudioCueOnTrigger = AudioCues.Loot;
-            }
-
-            // turn off crime box
-            if (GetComponent<TriggerCrime>() != null)
-            {
-                if (GetComponent<TriggerCrime>().CrimeBox != null)
-                    GetComponent<TriggerCrime>().CrimeBox.gameObject.SetActive(false);
             }
 
             // trigger mission kill

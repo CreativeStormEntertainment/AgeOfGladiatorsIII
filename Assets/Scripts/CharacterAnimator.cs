@@ -55,7 +55,6 @@ public class CharacterAnimator : MonoBehaviour
 
 
 
-    // switch animator
     public void SwitchAnimator()
     {
         if (Combat.instance.combatActivated)
@@ -76,7 +75,6 @@ public class CharacterAnimator : MonoBehaviour
 
 
 
-    // change animation speed
     public void CheckAnimationSpeed()
     {
         //if (PartyScene.instance.MainCharacter.GetComponent<Movement>().restrictMovement)
@@ -84,10 +82,27 @@ public class CharacterAnimator : MonoBehaviour
         //else
         //    AttachedAnimator.speed = 1f;
     }
+    
+    public float GetClipDuration()
+    {
+        AnimatorClipInfo[] m_CurrentClipInfo;
+        string m_ClipName;
+        float m_CurrentClipLength;
+
+        // current animation clip information for the base layer
+        m_CurrentClipInfo = AttachedAnimator.GetCurrentAnimatorClipInfo(0);
+        // length of the clip
+        m_CurrentClipLength = m_CurrentClipInfo[0].clip.length;
+        // name of clip
+        m_ClipName = m_CurrentClipInfo[0].clip.name;
+
+        //Debug.Log(Combat.instance.round + ": " + AttachedCharacter.characterName + " (" + m_ClipName + ", " + m_CurrentClipLength + ") ----------------------------");
+
+        return m_CurrentClipLength;
+    }
 
 
 
-    // play idle animation (non-combat)
     void PlayIdleAnimation()
     {
         // -------------------------------------------------------
@@ -203,7 +218,6 @@ public class CharacterAnimator : MonoBehaviour
         // -------------------------------------------------------
     }
 
-    // play movement animations (non-combat)
     void PlayMovementAnimations()
     {
         // -------------------------------------------------------
@@ -230,7 +244,6 @@ public class CharacterAnimator : MonoBehaviour
         // -------------------------------------------------------
     }
 
-    // play combat animation
     void PlayCombatAnimation()
     {
         // -------------------------------------------------------
@@ -319,7 +332,6 @@ public class CharacterAnimator : MonoBehaviour
         // -------------------------------------------------------
     }
 
-    // play dying animations
     void PlayDyingAnimations()
     {
         if (AttachedCharacter.isDead)
@@ -338,7 +350,6 @@ public class CharacterAnimator : MonoBehaviour
 
 
 
-    // attach character and animator
     public void AttachCharacter()
     {
         // attach NPC on runtime - done here due to NPC script being attached sometimes after game start
@@ -371,7 +382,6 @@ public class CharacterAnimator : MonoBehaviour
 
 
 
-    // blood splatter
     public void ActivateBloodSplatter(Character _Attacking)
     {
         if (GetComponentInChildren<BloodActivator>() != null && _Attacking.CombatStyle() != WeaponTypes.Unarmed)
@@ -392,7 +402,6 @@ public class CharacterAnimator : MonoBehaviour
 
 
 
-    // set all animators (bool)
     public void SetAllAnimators(string _condition, bool _state)
     {
         Animator[] _ChildAnimators = GetComponentsInChildren<Animator>();
@@ -401,7 +410,6 @@ public class CharacterAnimator : MonoBehaviour
             _Animator.SetBool(_condition, _state);
     }
 
-    // set all animators (int)
     void SetAllAnimators(string _condition, int _index)
     {
         Animator[] _ChildAnimators = GetComponentsInChildren<Animator>();
@@ -410,34 +418,12 @@ public class CharacterAnimator : MonoBehaviour
             _Animator.SetInteger(_condition, _index);
     }
 
-    // set all animators (controller)
     void SetAllAnimators(RuntimeAnimatorController _Controller)
     {
         Animator[] _ChildAnimators = GetComponentsInChildren<Animator>();
 
         foreach (Animator _Animator in _ChildAnimators)
             _Animator.runtimeAnimatorController = _Controller as RuntimeAnimatorController;
-    }
-
-
-
-    // get current clip duration
-    public float GetClipDuration()
-    {
-        AnimatorClipInfo[] m_CurrentClipInfo;
-        string m_ClipName;
-        float m_CurrentClipLength;
-
-        // current animation clip information for the base layer
-        m_CurrentClipInfo = AttachedAnimator.GetCurrentAnimatorClipInfo(0);
-        // length of the clip
-        m_CurrentClipLength = m_CurrentClipInfo[0].clip.length;
-        // name of clip
-        m_ClipName = m_CurrentClipInfo[0].clip.name;
-
-        //Debug.Log(Combat.instance.round + ": " + AttachedCharacter.characterName + " (" + m_ClipName + ", " + m_CurrentClipLength + ") ----------------------------");
-
-        return m_CurrentClipLength;
     }
 }
 

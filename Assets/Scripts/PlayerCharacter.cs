@@ -20,7 +20,6 @@ public class PlayerCharacter : Character
 
 
 
-    // start character stats
     public void CharacterStart()
     {
         characterName = "Judge Diablo";
@@ -71,7 +70,7 @@ public class PlayerCharacter : Character
 
 
 
-    // transfer settings
+
     public void TransferSetting(PlayerCharacter i)
     {
         characterName = i.characterName;
@@ -125,7 +124,6 @@ public class PlayerCharacter : Character
 
 
 
-    // premade character (temporary)
     public void PremadeCharacter()
     {
         characterName = "Judge Diablo";
@@ -172,7 +170,6 @@ public class PlayerCharacter : Character
         playerControlledCombat = true;
     }
 
-    // toggle occupied image
     public void ToggleOccupied(bool _show)
     {
         occupied.SetActive(_show);

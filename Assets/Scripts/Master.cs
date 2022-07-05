@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Dredd : MonoBehaviour
+public class Master : MonoBehaviour
 {
-    public static Dredd instance;
+    public static Master instance;
 
     // new character stats stored here from creation screen
     public PlayerCharacter NewCharacterTemporary;
@@ -33,7 +33,7 @@ public class Dredd : MonoBehaviour
 
 
 
-    public void ResetDredd()
+    public void ResetMaster()
     {
         instance = null;
         Destroy(gameObject);

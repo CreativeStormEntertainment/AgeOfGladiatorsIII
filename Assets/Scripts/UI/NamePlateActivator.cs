@@ -15,7 +15,7 @@ public class NamePlateActivator : MonoBehaviour
 
     void Update()
     {
-        if (Dredd.instance == null)
+        if (Master.instance == null)
             return;
 
         Camera _Camera = PlayerScene.instance.SceneCamera;

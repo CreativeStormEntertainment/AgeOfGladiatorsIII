@@ -46,7 +46,6 @@ public class StartScreen : MonoBehaviour
 
 
 
-    // character creation
     public void CharacterCreation()
     {
         NewGameScreen.Populate();
@@ -55,7 +54,6 @@ public class StartScreen : MonoBehaviour
 
 
 
-    // start new game (from character creation)
     public void StartNewGame()
     {
         GameMusic.instance.FadeOutMusic(1f); // change to 2f for final
@@ -67,7 +65,6 @@ public class StartScreen : MonoBehaviour
         StartCoroutine(StartAfterFade());
     }
 
-    // start after audio fade
     public IEnumerator StartAfterFade()
     {
         yield return new WaitForSeconds(1f); // change to 2f for final
@@ -75,7 +72,6 @@ public class StartScreen : MonoBehaviour
         LoadScenes();
     }
 
-    // quit game
     public void QuitGame()
     {
         Application.Quit();
@@ -83,7 +79,6 @@ public class StartScreen : MonoBehaviour
 
 
 
-    // continue game
     public void ContinueGame()
     {
         GameMusic.instance.FadeOutMusic(1f);
@@ -95,19 +90,17 @@ public class StartScreen : MonoBehaviour
         StartCoroutine(ContinueAfterFade());
     }
 
-    // continue after audio fade
     public IEnumerator ContinueAfterFade()
     {
         yield return new WaitForSeconds(1f);
 
         LoadScenes();
 
-        Dredd.instance.NewCharacterTemporary.PremadeCharacter(); // TEMPORARY(!!!!)
+        Master.instance.NewCharacterTemporary.PremadeCharacter(); // TEMPORARY(!!!!)
     }
 
 
 
-    // load scenes
     void LoadScenes()
     {
         SceneSwitch.SceneSwitcherStartGameAsync("Map-Street", 0); // loads player party first then first location

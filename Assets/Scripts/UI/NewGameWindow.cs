@@ -52,7 +52,7 @@ public class NewGameWindow : MonoBehaviour
     // populate
     public void Populate()
     {
-        SelectedCharacter = Dredd.instance.NewCharacterTemporary;
+        SelectedCharacter = Master.instance.NewCharacterTemporary;
         SelectedCharacter.CharacterStart();
 
         PopulatePortraitPanel();
