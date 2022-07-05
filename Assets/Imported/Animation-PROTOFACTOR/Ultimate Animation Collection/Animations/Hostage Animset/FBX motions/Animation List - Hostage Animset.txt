@@ -1,0 +1,46 @@
+This list is in case you purchased this animation set to use in another engine or application. It is for Protof-Actor@HostageAnimset.fbx
+
+
+Animation List:
+
+idleLookAroundHostage: 10-135
+IdleBreatheHostage: 145-250
+CalmDown1: 260-304
+CalmDown2: 315-390
+IdleHandsOnHead: 400-480
+WalkForwardHandsOnHead: 490-530
+WalkBackwardsHandsOnHead: 540-580
+WalkForwardHandsOnHead_RM: 590-630
+WalkBackwardsHandsOnHead_RM: 640-680
+GetOnKneesHandsOnHead: 690-800
+IdleKneelHandsOnHead: 810-909
+ExecutedKneelHandsOnHead: 920-977
+KneelToGetBackUpHandsOnHead: 990-1080
+IdleHandsUp: 1090-1170
+WalkForwardHandsUp: 1180-1220
+WalkBackwardsHandsUp: 1230-1270
+WalkForwardHandsUp_RM: 1280-1320
+WalkBackwardsHandsUp_RM: 1330-1370
+GetOnKneesHandsUp: 1380-1545
+IdleKneelHandsUp: 1555-1630
+ExecutedKneelHandsUp: 1640-1697
+KneelToGetBackUpHandsUp: 1705-1836
+Scared: 1845-1975
+WalkForwardScared: 1985-2025
+WalkBackwardsScared: 2035-2075
+WalkForwardScared_RM: 2085-2125
+WalkBackwardsScared_RM: 2135-2175
+GoTositOnTheGround: 2185-2301
+IdleSitOnTheGround: 2315-2390
+IdleLookAroundSitOnTheGround: 2400-2555
+IdleLookUpSitOnTheGround: 2565-2640
+NodLookUpSitOnTheGround: 2650-2700
+SitOnTheGroundTOGoBackUp: 2710-2822
+GetHitFront: 2835-2870
+GetHitBack: 2880-2915
+GetHitRight: 2925-2955
+GetHitLeft: 2965-3005
+DeathFrontHandsOnHead: 3015-3102
+DeathBackHandsOnHead: 3115-3210
+DeathFrontHandsUp: 3220-3307
+DeathBackHandsUp: 3320-3415

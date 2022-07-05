@@ -1,0 +1,123 @@
+This list is in case you purchased this animation set to use in another engine or application. It is for Protof-Actor@1HandedMeleeWeaponAnimset.fbx
+
+
+Animation List:
+
+IdleBreathe: 10-130
+Draw1HandedMelee: 140-185
+PutBack1HandedMelee: 200-245
+IdleLookAround1HandedMelee: 255-470
+Idle1HandedMelee: 480-600
+
+WalkForwardHold1HandedMelee: 610-650
+WalkForwardHold1HandedMelee_RM: 660-700
+RunHold1HandedMelee: 710-728
+RunHold1HandedMelee_RM: 740-758
+SprintHold1HandedMelee: 770-782
+SprintHold1HandedMelee_RM: 795-407
+
+JumpToApex1HandedMelee: 820-832
+Falling1HandedMelee: 845-885
+LandingLight1HandedMelee: 895-905
+LandingMedium1HandedMelee: 915-949
+LandingHeavy1HandedMelee: 960-1003
+
+IdleCombat1HandedMelee: 1015-1045
+
+WalkForward1HandedMelee: 1055-1095
+WalkBackwards1HandedMelee: 1105-1145
+WalkForwardRight1HandedMelee: 1555-1195
+WalkBackwardsLeft1HandedMelee: 1205-1245
+WalkForwardLeft1HandedMelee: 1255-1295
+WalkBackwardsRight1HandedMelee: 1305-1345
+WalkLeft1HandedMelee: 1355-1395
+WalkRight1HandedMelee: 1405-1445
+WalkForward1HandedMelee_RM: 1455-1495
+WalkBackwards1HandedMelee_RM: 1505-1545
+WalkForwardRight1HandedMelee_RM: 1555-1595
+WalkBackwardsLeft1HandedMelee_RM: 1605-1645
+WalkForwardLeft1HandedMelee_RM: 1655-1695
+WalkBackwardsRight1HandedMelee_RM: 1705-1745
+WalkLeft1HandedMelee_RM: 1755-1795
+WalkRight1HandedMelee_RM: 1805-1845
+
+CrouchIdle1HandedMelee: 1855-1925
+
+CrouchForward1HandedMelee: 1940-1990
+CrouchBackwards1HandedMelee: 2000-2050
+CrouchForwardLeft1HandedMelee: 2060-2110
+CrouchBackwardsRight1HandedMelee: 2120-2170
+CrouchForwardRightA1HandedMelee: 2180-2230
+CrouchBackwardsLeft1HandedMelee: 2240-2290
+CrouchRight1HandedMelee: 2300-2350
+CrouchLeft1HandedMelee: 2360-2410
+CrouchForward1HandedMelee_RM: 2420-2470
+CrouchBackwards1HandedMelee_RM: 2480-2530
+CrouchForwardLeft1HandedMelee_RM: 2540-2590
+CrouchBackwardsRight1HandedMelee_RM: 2600-2650
+CrouchForwardRight1HandedMelee_RM: 2660-2710
+CrouchBackwardsLeft1HandedMelee_RM: 2720-2770
+CrouchRight1HandedMelee_RM: 2780-2830
+CrouchLeft1HandedMelee_RM: 2840-2890
+
+RunForward1HandedMelee: 2905-2925
+RunBackwards1HandedMelee: 2935-2955
+RunRight1HandedMelee: 2965-2985
+RunLeft1HandedMelee: 2995-3015
+RunForwardLeft1HandedMelee: 3025-3045
+RunBackwardsRight1HandedMelee: 3055-3075
+RunForwardRight1HandedMelee: 3085-3105
+RunBackwardsLeft1HandedMelee: 3115-3135
+RunForward1HandedMelee_RM: 3145-3165
+RunBackwards1HandedMelee_RM: 3175-3195
+RunRight1HandedMelee_RM: 3205-3225
+RunLeft1HandedMelee_RM: 3235-3255
+RunForwardLeft1HandedMelee_RM: 3265-3285
+RunBackwardsRight1HandedMelee_RM: 3295-3315
+RunForwardRight1HandedMelee_RM: 3325-3345
+RunBackwardsLeft1HandedMelee_RM: 3355-3375
+
+AttackA1HandedMelee: 3385-3415
+AttackAForward1HandedMelee: 3425-3455
+AttackAForward1HandedMelee_RM: 3465-3495
+2HitComboA1HandedMelee: 3505-3541
+AttackB1HandedMelee: 3555-3585
+AttackBFroward1HandedMelee: 3595-3625
+AttackBForward1HandedMelee_RM: 3635-3665
+AttackC1HandedMelee: 3675-3710
+AttackCFroward1HandedMelee: 3720-3755
+AttackCForward1HandedMelee_RM: 3765-3800
+AttackDForward1HandedMelee: 3810-3854
+2HitComboAForward1HandedMelee: 3865-3901
+3HitComboAForward1HandedMelee: 3915-3977
+3HitComboBForward1HandedMelee: 3990-4045
+AttackDForward1HandedMelee_RM: 4055-4099
+2HitComboAForward1HandedMelee_RM: 4110-4146
+3HitComboAForward1HandedMelee_RM: 4160-4222
+3HitComboBForward1HandedMelee_RM: 4235-4290
+
+GetHitLightFront1HandedMelee: 4300-4324
+GetHitLightBack1HandedMelee: 4335-4365
+GetHitLightRight1HandedMelee: 4375-4405
+GetHitLightLeft1HandedMelee: 4415-4445
+GetHitHeavyFront1HandedMelee: 4455-4490
+GetHitHeavyBack1HandedMelee: 4500-4545
+GetHitHeavyLeft1HandedMelee: 4555-4605
+GetHitHeavyRight1HandedMelee: 4615-4660
+GetHitHeavyFront1HandedMelee_RM: 4670-4705
+GetHitHeavyBack1HandedMelee_RM: 4715-4760
+GetHitHeavyLeft1HandedMelee_RM: 4770-4820
+GetHitHeavyRight1HandedMelee_RM: 4830-4875
+
+DeathFront1HandedMelee: 4885-7972
+DeadFront: 4985-5000
+GetBackUpFront: 5010-5090
+DeathBack1HandedMelee: 5100-5195
+DeadBack: 5205-5220
+GetBackUpBack: 5230-5326
+DeathRight1HandedMelee: 5335-5410
+DeadRight: 5420-5435
+GetBackUpRight: 5445-5535
+DeathLeft1HandedMelee: 5545-5641
+DeadLeft: 5650-5665
+GetBackUpLeft: 5675-5780

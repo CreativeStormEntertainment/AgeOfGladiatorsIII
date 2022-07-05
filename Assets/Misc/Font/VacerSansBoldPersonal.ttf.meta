@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 48382748b54df1b4595f6d13c1588058
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vacer Sans Personal
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d2a072737a9214b499de5f24b4f27680, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,144 @@
+This list is in case you purchased this animation set to use in another engine or application. It is for Protof-Actor@2HandedMeleeWeaponAnimset.fbx
+
+
+Animation List:
+
+IdleBreathe: 10-130
+Draw2HandedMelee: 140-190
+PutBack2HandedMelee: 200-249
+IdleBreathe2HandedMelee: 260-415
+IdleLookAround2HandedMelee: 425-680
+IdleCombatA2HandedMelee: 690-950
+IdleCombatBA2HandedMelee: 960-992
+IdleCombatC2HandedMelee: 1000-1190
+
+TauntA2HandedMelee: 1200-1275
+TauntB2HandedMelee: 1285-1405
+
+WalkForwardHold2HandedMelee: 1415-1455
+WalkForwardHold2HandedMelee_RM: 1465-1505
+WalkBackwardsHold2HandedMelee: 1515-1555
+WalkBackwardsHold2HandedMelee_RM: 1565-1605
+RunHold2HandedMelee: 1615-1635
+RunHold2HandedMelee_RM: 1645-1665
+SprintHold2HandedMelee: 1675-1690
+SprintHold2HandedMelee_RM: 1700-1715
+
+JumpToApex2HandedMelee: 1725-1735
+Falling2HandedMelee: 1745-1805
+LandingLight2HandedMelee: 1815-1833
+LandingMedium2HandedMelee: 1845-1867
+LandingHeavy2HandedMelee: 1880-1913
+
+WalkForward2HandedMelee: 1925-1965
+WalkBackwards2HandedMelee: 1975-2015
+WalkForwardRight2HandedMelee: 2025-2065
+WalkBackwardsLeft2HandedMelee: 2075-2115
+WalkForwardLeft2HandedMelee: 2125-2165
+WalkBackwardsRight2HandedMelee: 2175-2215
+WalkLeft2HandedMelee: 2225-2265
+WalkRight2HandedMelee: 2275-2315
+WalkForward2HandedMelee_RM: 2325-2365
+WalkBackwards2HandedMelee_RM: 2375-2415
+WalkForwardRight2HandedMelee_RM: 2425-2465
+WalkBackwardsLeft2HandedMelee_RM: 2475-2515
+WalkForwardLeft2HandedMelee_RM: 2525-2565
+WalkBackwardsRight2HandedMelee_RM: 2575-2615
+WalkLeft2HandedMelee_RM: 2625-2665
+WalkRight2HandedMelee_RM: 2675-2715
+
+RunForward2HandedMelee: 2725-2741
+RunBackwards2HandedMelee: 2755-2771
+RunRight2HandedMelee: 2785-2802
+RunLeft2HandedMelee: 2815-2832
+RunForwardLeft2HandedMelee: 2845-2862
+RunBackwardsRight2HandedMelee: 2875-2892
+RunForwardRight2HandedMelee: 2905-2922
+RunBackwardsLeft2HandedMelee: 2935-2951
+RunForward2HandedMelee_RM: 2965-2981
+RunBackwards2HandedMelee_RM: 2995-3011
+RunRight2HandedMelee_RM: 3025-3042
+RunLeft2HandedMelee_RM: 3055-3072
+RunForwardLeft2HandedMelee_RM: 3085-3102
+RunBackwardsRight2HandedMelee_RM: 3115-3132
+RunForwardRight2HandedMelee_RM: 3145-3162
+RunBackwardsLeft2HandedMelee_RM: 3175-3191
+
+CrouchIdle2HandedMelee: 3200-3285
+CrouchIdleLookAround2HandedMelee: 3295-3580
+
+CrouchForward2HandedMelee: 3590-3640
+CrouchBackwards2HandedMelee: 3650-3700
+CrouchForwardLeft2HandedMelee: 3710-3760
+CrouchBackwardsRight2HandedMelee: 3770-3820
+CrouchForwardRightA2HandedMelee: 3830-3880
+CrouchBackwardsLeft2HandedMelee: 3890-3940
+CrouchRight2HandedMelee: 3950-4000 
+CrouchLeft2HandedMelee: 4010-4060
+CrouchForward2HandedMelee_RM: 4070-4120
+CrouchBackwards2HandedMelee_RM: 4130-4180
+CrouchForwardLeft2HandedMelee_RM: 4190-4240
+CrouchBackwardsRight2HandedMelee_RM: 4250-4300
+CrouchForwardRight2HandedMelee_RM: 4310-4360
+CrouchBackwardsLeft2HandedMelee_RM: 4370-4420
+CrouchRight2HandedMelee_RM: 4430-4480
+CrouchLeft2HandedMelee_RM: 4490-4540
+
+AttackA2HandedMelee: 4550-4590
+AttackA2HandedMelee_RM: 4600-4640
+AttackAForward2HandedMelee: 4650-4700
+AttackAForward2HandedMelee_RM: 4710-4760
+AttackB2HandedMelee: 4770-4815
+AttackC2HandedMelee: 4825-4865
+AttackD2HandedMelee: 4875-4930
+AttackE2HandedMelee: 4940-4980
+AttackE2HandedMelee_RM: 4990-5030
+AttackBForward2HandedMelee: 5040-5090
+AttackBForward2HandedMelee_RM: 5100-5150
+AttackF2HandedMelee: 5160-5220
+AttackF2HandedMelee_RM: 5230-5290
+2HitComboAForward2HandedMelee: 5300-5360
+2HitComboAForward2HandedMelee_RM: 5370-5430
+3HitComboForward2HandedMelee: 5440-5530
+3HitComboForward2HandedMelee_RM: 5540-5630
+JumpAttack: 5640-5715
+JumpAttack_RM: 5725-5800
+AttackG2HandedMelee: 5810-5910
+AttackG2HandedMelee_RM: 5920-6020
+2HitComboBForward2HandedMelee: 6030-6090
+2HitComboBForward2HandedMelee_RM: 6100-6160
+
+DodgeForward2HandedMelee: 6170-6210
+DodgeBackwards2HandedMelee: 6220-6260
+DodgeForward2HandedMelee_RM: 6270-6310
+DodgeBackwards2HandedMelee_RM: 6320-6360
+
+ParryFront2HandedMelee: 6370-6395
+ParryRight2HandedMelee: 6405-6430
+ParryLeft2HandedMelee: 6440-6470
+
+GetHitLightFront2HandedMelee: 6480-6510
+GetHitLightBack2HandedMelee: 6520-6555
+GetHitLightRight2HandedMelee: 6565-6595
+GetHitLightLeft2HandedMelee: 6605-6640
+GetHitHeavyFront2HandedMelee: 6650-6690
+GetHitHeavyBack2HandedMelee: 6700-6750
+GetHitHeavyLeft2HandedMelee: 6760-6810
+GetHitHeavyRight2HandedMelee: 6820-6870
+GetHitHeavyFront2HandedMelee_RM: 6880-6920
+GetHitHeavyBack2HandedMelee_RM: 6930-6980
+GetHitHeavyLeft2HandedMelee_RM: 6990-7040
+GetHitHeavyRight2HandedMelee_RM: 7050-7100
+
+DeathFront2HandedMelee: 7110-7197
+DeadFront: 7210-7225
+GetBackUpFront: 7235-7315
+DeathBack2HandedMelee: 7325-7420
+DeadBack: 7430-7445
+GetBackUpBack: 7455-7550
+DeathRight2HandedMelee: 7560-7635
+DeadRight: 7645-7660
+GetBackUpRight: 7670-7760
+DeathLeft2HandedMelee: 7770-7865
+DeadLeft: 7875-7890
+GetBackUpLeft: 7900-8005

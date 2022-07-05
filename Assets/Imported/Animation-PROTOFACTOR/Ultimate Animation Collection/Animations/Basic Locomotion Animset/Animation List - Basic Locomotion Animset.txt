@@ -1,0 +1,119 @@
+This list is in case you purchased this animation set to use in another engine or application. It is for Protof-Actor@BasicLocomotionAnimset.fbx
+
+
+Animation List:
+
+IdleLookAround: 10-225
+IdleBreathe: 235-355
+IdleLookAroundYawnScratchHead: 365-925
+
+WalkForward: 935-975
+WalkForward_RM: 985-1025
+WalkForwardTurnLeft: 1035-1075
+WalkForwardTurnLeft_RM: 1085-1125
+WalkForwardTurnRight: 1135-1175
+WalkForwardTurnRight_RM: 1185-1225
+WalkUTurnLeft: 1235-1318
+WalkUTurnRight: 1330-1409
+WalkUTurnLeft_RM: 1420-1503
+WalkUTurnRight_RM: 1515-1594
+
+RunForward: 1610-1628
+RunForward_RM: 1640-1658
+RunForwardTurnLeft: 1670-1688
+RunForwardTurnRight: 1700-1718
+RunForwardTurnLeft_RM: 1730-1758
+RunForwardTurnRight_RM: 1760-1778
+
+RunFastForward: 1790-1811
+RunFastForward_RM: 1820-1841
+RunFastForwardTurnLeft: 1850-1871
+RunFastForwardTurnRight: 1880-1901
+RunFastForwardTurnLeft_RM: 1910-1931
+RunFastForwardTurnRight_RM: 1940-1961
+
+Sprint: 1970-1982
+Sprint_RM: 1995-2007
+SprintTurnLeft: 2020-2032
+SpintTurnRight: 2045-2057
+SprintTurnLeft_RM: 2070-2082
+SprintTurnRight_RM: 2095-2107
+
+RunUTurnRight: 2120-2169
+RunUturnLeft: 2180-2228
+RunUTurnRight_RM: 2240-2288
+RunUTurnLeft_RM: 2300-2348
+
+JumpToApex: 2360-2372
+RunJumpToApexLeftFoot: 2385-2405
+RunJumpToApexRightFoot: 2415-2435
+WalkJumpToApexLeftFoot: 2445-2460
+WalkJumpToApexRightFoot: 2470-2485
+RunJumpToApexLeftFoot_RM: 2495-2515
+RunJumpToApexRightFoot_RM: 2525-2545
+WalkJumpToApexLeftFoot_RM: 2555-2570
+WalkJumpToApexRightFoot_RM: 2580-2595
+Falling: 2605-2645
+LandingLight: 2655-2665
+LandingMedium: 2675-2710
+LandingHeavy: 2720-2763
+
+Turn90Left: 2775-2815
+Turn90Right: 2825-2865
+Turn180Left: 2875-2920
+Turn180Right: 2930-2980
+Turn90Left_RM: 2990-3030
+Turn90Right_RM: 3040-3080
+Turn180Left_RM: 3090-3135
+Turn180Right_RM: 3145-3195
+Pass1MeterObstacleLeft: 3205-3251
+Pass1MeterObstacleRight: 3265-3309
+Pass1MeterObstacleLeft_RM: 3320-3366
+Pass1MeterObstacleRight_RM: 3380-3424
+
+CrouchIdleLookAround1: 3435-3610
+CrouchIdle1: 3620-3690
+CrouchIdleLookAround2: 3700-3875
+CrouchIdle2: 3885-3955
+CrouchTurn90Left: 3965-4022
+CrouchTurn90Right: 4035-4095
+CrouchTurn180Left: 4105-4190
+CrouchTurn180Right: 4200-4290
+CrouchTurn90Left_RM: 4300-4357
+CrouchTurn90Right_RM: 4370-4430
+CrouchTurn180Left_RM: 4440-4525
+CrouchTurn180Right_RM: 4535-4625
+
+CrouchForward: 4635-4680
+CrouchBackwards: 4690-4735
+CrouchBackwardsRight: 4745-4790
+CrouchForwardLeft: 4800-4845
+CrouchRight: 4855-4900
+CrouchLeft: 4910-4955
+CrouchBackwardsLeft: 4965-5010
+CrouchForwardRight: 5020-5065
+CrouchForward_RM: 5075-5120
+CrouchBackwards_RM: 5130-5175
+CrouchBackwardsRight_RM: 5185-5230
+CrouchForwardLeft_RM: 5240-5285
+CrouchRight_RM: 5295-5340
+CrouchLeft_RM: 5350-5395
+CrouchBackwardsLeft_RM: 5405-5450
+CrouchForwardRight_RM: 5460-5505
+
+WalkForward2: 5515-5555
+WalkBackwards: 5565-5605
+WalkForwadRight: 5615-5655
+WalkBackwardsLeft: 5665-5705
+WalkForwardLeft: 5715-5755
+WalkBackwardsRight: 5765-5805
+WalkRight: 5815-5855
+WalkLeft: 5865-5905
+WalkForward2_RM: 5915-5955
+WalkBackwards_RM: 5965-6005
+WalkForwadRight_RM: 6015-6055
+WalkBackwardsLeft_RM: 6065-6105
+WalkForwardLeft_RM: 6115-6155
+WalkBackwardsRight_RM: 6165-6205
+WalkRight_RM: 6215-6255
+WalkLeft_RM: 6265-6305
