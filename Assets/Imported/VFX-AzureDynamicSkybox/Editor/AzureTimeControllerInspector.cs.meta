@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: a94679b4b9803a147bd1a128dbdc59bc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - logoTexture: {fileID: 2800000, guid: 976cc221f428ffa42bd0e3dc6bef6e80, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
