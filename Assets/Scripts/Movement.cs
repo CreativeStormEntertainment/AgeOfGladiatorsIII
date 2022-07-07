@@ -59,7 +59,6 @@ public class Movement : MonoBehaviour
 
 
 
-    // moving
     public void Moving()
     {
         // movement mode
@@ -69,7 +68,6 @@ public class Movement : MonoBehaviour
             NonCombatMovement();
     }
 
-    // combat movement
     public void CombatMovement()
     {
         if (!isMoving)
@@ -103,7 +101,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    // non-combat movement
     public void NonCombatMovement()
     {
         // ------------------------------------
@@ -135,7 +132,6 @@ public class Movement : MonoBehaviour
 
 
 
-    // stop moving
     public void StopMoving()
     {
         // --------------------------------
@@ -166,7 +162,6 @@ public class Movement : MonoBehaviour
         // --------------------------------
     }
 
-    // look at target
     public void LookAtTarget(Vector3 _target)
     {
         var _lookPosition = _target - transform.position;
@@ -176,7 +171,6 @@ public class Movement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_lookPosition), Time.deltaTime * 10);
     }
 
-    // look at combat target
     public void LookAtCombatTarget()
     {
         if (Combat.instance.Attacking == GetComponent<Character>() && Combat.instance.Defending != null)
@@ -189,7 +183,6 @@ public class Movement : MonoBehaviour
         } 
     }
 
-    // clear path
     public void ClearPath()
     {
         path.Clear();
@@ -198,7 +191,6 @@ public class Movement : MonoBehaviour
 
 
 
-    // move to grid (combat start)
     public void CombatStartMoveToGrid()
     {
         if (GetComponent<NPC>() != null && GetComponent<NPC>().isHostile || GetComponent<PlayerCharacter>() != null)
@@ -208,7 +200,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    // move to grid (combat start)
     IEnumerator MoveToGrid()
     {
         isMoving = true;

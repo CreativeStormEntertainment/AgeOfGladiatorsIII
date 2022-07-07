@@ -15,7 +15,7 @@ public class TravelWindowNode : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public GameObject LockedIcon;
 
 
-    // on mouse enter (ui event)
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         // change cursor
@@ -24,14 +24,12 @@ public class TravelWindowNode : MonoBehaviour, IPointerEnterHandler, IPointerExi
         UISounds.instance.PlayMouseOnNode();
     }
 
-    // on mouse exit (ui event)
     public void OnPointerExit(PointerEventData eventData)
     {
         // change cursor
         Cursor.SetCursor(null, Vector3.zero, CursorMode.Auto);
     }
 
-    // on pointer down
     public void OnPointerDown(PointerEventData eventData)
     {
         UISounds.instance.PlayTabButton();

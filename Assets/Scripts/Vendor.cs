@@ -6,7 +6,7 @@ public class Vendor : MonoBehaviour
 {
     public List<Item> VendorList = new List<Item>();
 
-    public int credits;
+    public int gold;
 
 
 
@@ -17,12 +17,11 @@ public class Vendor : MonoBehaviour
 
 
 
-    // supply store
     public void SupplyStore()
     {
         // ------------------------------
         // replenish coin
-        credits = Random.Range(400, 800);
+        gold = Random.Range(400, 800);
         // ------------------------------
 
         // ------------------------------

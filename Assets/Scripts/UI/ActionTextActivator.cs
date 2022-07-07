@@ -27,14 +27,12 @@ public class ActionTextActivator : MonoBehaviour
 
 
 
-    // report (xp gain)
     public IEnumerator ReportXP(float _incoming)
     {
         yield return new WaitForSeconds(0.3f);
         ActivateActionText("+" + _incoming + " XP");
     }
 
-    // report (damage)
     public IEnumerator ReportDamage(int _incoming)
     {
         Debug.Log(Combat.instance.round + ": " + Combat.instance.Defending.characterName + " Hit For " + _incoming + " (" + Combat.instance.Defending.combatHealth + ")");
@@ -43,14 +41,12 @@ public class ActionTextActivator : MonoBehaviour
         ActivateActionText("-" + _incoming);
     }
 
-    // report (damage)
     public IEnumerator ReportCriticalDamage()
     {
         yield return new WaitForSeconds(0.3f);
         ActivateActionText("\nCritical Hit!");
     }
 
-    // report (miss)
     public IEnumerator ReportMiss()
     {
         Debug.Log(Combat.instance.round + ": " + Combat.instance.Attacking.characterName + " Missed " + Combat.instance.Defending.characterName);
@@ -58,7 +54,6 @@ public class ActionTextActivator : MonoBehaviour
         ActivateActionText("Missed");
     }
 
-    // report (evasion)
     public IEnumerator ReportEvasion()
     {
         Debug.Log(Combat.instance.round + ": " + Combat.instance.Defending.characterName + " Evaded Attack!");
@@ -66,7 +61,6 @@ public class ActionTextActivator : MonoBehaviour
         ActivateActionText("Evaded");
     }
 
-    // report (cover)
     public IEnumerator ReportCover()
     {
         Debug.Log(Combat.instance.round + ": " + Combat.instance.Defending.characterName + " Missed (Cover)");
@@ -74,7 +68,6 @@ public class ActionTextActivator : MonoBehaviour
         ActivateActionText("Evaded (Cover)");
     }
 
-    // report (other)
     public IEnumerator ReportOther(string _input)
     {
         yield return new WaitForSeconds(0.0f);
@@ -83,7 +76,6 @@ public class ActionTextActivator : MonoBehaviour
 
 
 
-    // activate action text
     public void ActivateActionText(string _input)
     {
         GameObject _ActionText = Instantiate(Resources.Load("UI-ActionText")) as GameObject;
@@ -98,7 +90,6 @@ public class ActionTextActivator : MonoBehaviour
         ActionTextPosition(PlayerScene.instance.SceneCamera);
     }
 
-    // action text position
     void ActionTextPosition(Camera _Camera)
     {
         foreach (Transform child in transform)

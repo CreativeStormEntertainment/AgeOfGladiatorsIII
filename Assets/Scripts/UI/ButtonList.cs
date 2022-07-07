@@ -12,6 +12,8 @@ public class ButtonList : MonoBehaviour
     public List<Sprite> ButtonsTab = new List<Sprite>();
     public List<Sprite> ButtonAction = new List<Sprite>();
 
+
+
     void Start()
     {
         if (instance == null)

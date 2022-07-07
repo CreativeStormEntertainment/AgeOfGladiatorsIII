@@ -10,7 +10,8 @@ public class LevelBox : MonoBehaviour
     public TextMeshProUGUI Label;
     public TextMeshProUGUI LevelLabel;
 
-    // populate (level)
+
+
     public void PopulateLevel()
     {
         Header.text = ("Level Up!".ToUpper());
@@ -18,14 +19,14 @@ public class LevelBox : MonoBehaviour
         LevelLabel.text = (PlayerScene.instance.MainCharacter.level).ToString();
     }
 
-    // wait to close
+
+
     public IEnumerator CloseLevelBox()
     {
         yield return new WaitForSeconds(4f);
         Close();
     }
 
-    // close
     void Close()
     {
         this.gameObject.SetActive(false);

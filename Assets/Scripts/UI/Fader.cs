@@ -28,7 +28,6 @@ public class Fader : MonoBehaviour
 
 
 
-    // fade out
     void FadeOut()
     {
         if (GetComponentInChildren<Renderer>() == null) // for now
@@ -50,7 +49,6 @@ public class Fader : MonoBehaviour
             
     }
 
-    // fade in
     void FadeIn()
     {
         if (GetComponentInChildren<Renderer>() == null) // for now

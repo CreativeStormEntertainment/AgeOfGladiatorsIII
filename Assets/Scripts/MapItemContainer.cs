@@ -14,7 +14,6 @@ public class MapItemContainer : MonoBehaviour
 
 
 
-    // supply
     public void Supply()
     {
         // random containers (supply is here instead of start)

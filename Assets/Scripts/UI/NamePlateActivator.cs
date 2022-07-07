@@ -26,7 +26,6 @@ public class NamePlateActivator : MonoBehaviour
 
 
 
-    // name plate (activate)
     public void ActivateNamePlate(bool _mouseover)
     {
         // do not show non-hostile name plates during combat
@@ -48,7 +47,6 @@ public class NamePlateActivator : MonoBehaviour
         }
     }
 
-    // name plate (deactivate)
     public void DeactivateNamePlate()
     {
         if (NamePlate != null)
@@ -62,7 +60,6 @@ public class NamePlateActivator : MonoBehaviour
 
 
 
-    // position to node
     void NamePlatePosition(Camera _Camera)
     {
         foreach (Transform child in transform)

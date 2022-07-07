@@ -16,7 +16,6 @@ public class TriggerMissionKill : MonoBehaviour
 
 
 
-    // resolve trigger
     public void TriggerResolve()
     {
         switch (Type)
@@ -34,13 +33,11 @@ public class TriggerMissionKill : MonoBehaviour
 
 
 
-    // advance
     void Advance()
     {
         GameActions.instance.AdvanceQuest(questName, questEntry);
     }
 
-    // succeed
     void Succeed()
     {
         QuestLog.SetQuestEntryState(questName, questEntry, QuestState.Success);

@@ -13,7 +13,7 @@ public class EquipBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Image Panel;
 
 
-    // on mouse enter (ui event)
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         Panel.sprite = UISprites.instance.Item[1];
@@ -178,7 +178,6 @@ public class EquipBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
     }
 
-    // on mouse exit (ui event)
     public void OnPointerExit(PointerEventData eventData)
     {
         Panel.sprite = UISprites.instance.Item[0];

@@ -11,7 +11,6 @@ public class SmallBox : MonoBehaviour
 
 
 
-    // populate
     public void Populate(string _label)
     {
         Label.text = _label;

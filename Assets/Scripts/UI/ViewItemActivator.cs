@@ -26,7 +26,6 @@ public class ViewItemActivator : MonoBehaviour
 
 
 
-    // view item blurb
     public void ViewBlurb()
     {
         ViewItemActivator _Activator = GetComponent<ViewItemActivator>();
@@ -43,9 +42,6 @@ public class ViewItemActivator : MonoBehaviour
         }
     }
 
-
-
-    // view item position to node
     void ViewItemPosition(Camera _Camera)
     {
         foreach (Transform child in transform)

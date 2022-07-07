@@ -26,7 +26,6 @@ public class WorldMap : MonoBehaviour
 
 
 
-    // unlock starting areas
     public void UnlockStartingAreas()
     {
         AreasUnlocked.Add(0);

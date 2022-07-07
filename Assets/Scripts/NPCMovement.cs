@@ -54,7 +54,6 @@ public class NPCMovement: Movement
 
 
 
-    // turn toward player character
     public void TurnTowardCharacter(Vector3 _turnTarget)
     {
         // do not turn if unable
@@ -67,7 +66,6 @@ public class NPCMovement: Movement
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_lookPosition), Time.deltaTime * 10);
     }
 
-    // turn back to original rotation
     public void TurnTowardOriginalPosition()
     {
         // turn back

@@ -82,7 +82,6 @@ public class Map : MonoBehaviour
 
 
 
-    // place main character on entry node
     public void PlaceMainCharacterOnEntryNode()
     {
         // determine node
@@ -114,9 +113,10 @@ public class Map : MonoBehaviour
         OnLoad?.Invoke(true);
     }
 
-    // supply all containers (here so not to supply twice due to persistent saving)
     public void SupplyAllContainers()
     {
+        // supply all containers (here so not to supply twice due to persistent saving)
+
         foreach (Transform child in MapItems.transform)
         {
             if (child.gameObject.GetComponent<MapItemContainer>() != null)

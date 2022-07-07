@@ -10,7 +10,6 @@ public class ActionText : MonoBehaviour
 
 
 
-    // close action text
     public IEnumerator Close()
     {
         yield return new WaitForSeconds(2);
@@ -19,7 +18,6 @@ public class ActionText : MonoBehaviour
             DestroyActionText();
     }
 
-    // destroy action text
     public void DestroyActionText()
     {
         if (gameObject != null)

@@ -30,7 +30,6 @@ public class CombatLabel : MonoBehaviour
 
 
 
-    // populate
     public void Populate(Character _character, bool _combat, bool _mouseOver)
     {
         // main labels
@@ -55,7 +54,6 @@ public class CombatLabel : MonoBehaviour
 
 
 
-    // health bar
     void HealthBar()
     {
         if (AttachedCharacter.isDead)
@@ -81,7 +79,6 @@ public class CombatLabel : MonoBehaviour
         }
     }
 
-    // hit chance
     void HitChance()
     {
         HitChanceLabel.gameObject.SetActive(true);
@@ -94,7 +91,6 @@ public class CombatLabel : MonoBehaviour
         HitChanceLabel.text = _chance + "%";
     }
 
-    // armor
     void Armor()
     {
         ArmorPanel.gameObject.SetActive(true);

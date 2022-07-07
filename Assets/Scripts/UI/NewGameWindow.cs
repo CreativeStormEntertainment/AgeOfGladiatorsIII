@@ -49,7 +49,6 @@ public class NewGameWindow : MonoBehaviour
 
     
 
-    // populate
     public void Populate()
     {
         SelectedCharacter = Master.instance.NewCharacterTemporary;
@@ -62,7 +61,7 @@ public class NewGameWindow : MonoBehaviour
     }
 
 
-    // populate information
+
     public void PopulateInformation()
     {
         if (SelectedCharacter.male)
@@ -77,8 +76,6 @@ public class NewGameWindow : MonoBehaviour
         }
     }
 
-
-    // populate attributes
     public void PopulateAttributes()
     {
         // --------------------------------
@@ -115,7 +112,6 @@ public class NewGameWindow : MonoBehaviour
         // --------------------------------
     }
 
-    // populate combat
     public void PopulateCombat()
     {
         // --------------------------------
@@ -141,7 +137,6 @@ public class NewGameWindow : MonoBehaviour
         // --------------------------------
     }
 
-    // populate disposition
     public void PopulateMental()
     {
         // --------------------------------
@@ -166,7 +161,6 @@ public class NewGameWindow : MonoBehaviour
         // -----------------------------
     }
 
-    // populate technical
     public void PopulateTechnical()
     {
         // --------------------------------
@@ -193,7 +187,6 @@ public class NewGameWindow : MonoBehaviour
 
 
 
-    // check buttons
     void CheckButtons()
     {
         AttributesButton.interactable = true;
@@ -216,7 +209,6 @@ public class NewGameWindow : MonoBehaviour
 
 
 
-    // populate combat stats
     public void PopulateCombatStats()
     {
         // --------------------------------
@@ -272,7 +264,6 @@ public class NewGameWindow : MonoBehaviour
 
 
 
-    // change sex
     public void ChangeSex(bool _male)
     {
         SelectedCharacter.male = _male;
@@ -286,7 +277,6 @@ public class NewGameWindow : MonoBehaviour
         PopulatePortraitPanel();
     }
 
-    // next section
     public void ToggleSection(int _input)
     {
         ResetAll();
@@ -308,7 +298,6 @@ public class NewGameWindow : MonoBehaviour
         }
     }
 
-    // reset all
     void ResetAll()
     {
         Attributes.gameObject.SetActive(false);
@@ -319,7 +308,6 @@ public class NewGameWindow : MonoBehaviour
 
 
 
-    // populate portrait panel
     public void PopulatePortraitPanel()
     {
         CharacterPortraitSmall.sprite = PortraitSelector.FindPortrait(SelectedCharacter, 2);
@@ -327,7 +315,6 @@ public class NewGameWindow : MonoBehaviour
         Character3D.instance.PopulateModel(false, SelectedCharacter);
     }
 
-    // next portrait
     public void NextPortrait()
     {
         SelectedCharacter.portraitNumber++;
@@ -344,7 +331,6 @@ public class NewGameWindow : MonoBehaviour
         PopulatePortraitPanel();
     }
 
-    // previous portrait
     public void PreviousPortrait()
     {
         SelectedCharacter.portraitNumber--;
@@ -361,13 +347,11 @@ public class NewGameWindow : MonoBehaviour
         PopulatePortraitPanel();
     }
 
-    // show head
     public void ShowHead()
     {
         Character3D.instance.ShowHead();
     }
 
-    // show body
     public void ShowBody()
     {
         Character3D.instance.ShowBody();
@@ -375,7 +359,6 @@ public class NewGameWindow : MonoBehaviour
 
 
 
-    // close
     public void Close()
     {
         this.gameObject.SetActive(false);

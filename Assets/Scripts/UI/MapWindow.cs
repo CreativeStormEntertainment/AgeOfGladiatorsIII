@@ -8,7 +8,6 @@ public class MapWindow : MonoBehaviour
 
 
 
-    // populate map
     public void Populate()
     {
         ActivateMapIcons(true);
@@ -22,16 +21,8 @@ public class MapWindow : MonoBehaviour
         KeyIcons[5].GetComponent<ModelShark.TooltipTrigger>().SetText("BodyText", $"Door");
     }
 
-    // close map
-    public void Close()
-    {
-        ActivateMapIcons(false);
-        //ActivateMapOverlay(false);
-    }
 
 
-
-    // activate map overlay
     void ActivateMapOverlay(bool _activate)
     {
         var FoundObjects = FindObjectsOfType<Map>();
@@ -43,7 +34,6 @@ public class MapWindow : MonoBehaviour
         }
     }
 
-    // activate map icons
     public void ActivateMapIcons(bool _activate)
     {
         // -----------------------------
@@ -52,5 +42,13 @@ public class MapWindow : MonoBehaviour
         foreach (MapIcon _Icon in FoundObjects)
             _Icon.ActivateIcon(_activate);
         // -----------------------------
+    }
+
+
+
+    public void Close()
+    {
+        ActivateMapIcons(false);
+        //ActivateMapOverlay(false);
     }
 }

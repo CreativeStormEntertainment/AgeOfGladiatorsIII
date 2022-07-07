@@ -8,7 +8,6 @@ public class OpenDoor : MonoBehaviour
 
 
 
-    // open doors
     public void OpenAttachedDoors()
     {
         foreach (MapDoor _Door in Doors)

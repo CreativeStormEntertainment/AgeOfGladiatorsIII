@@ -30,7 +30,6 @@ public class AttributeBox : MonoBehaviour
 
 
 
-    // populate
     public void Populate(PlayerCharacter _Character, bool _newCharacter)
     {
         // ---------------------------------
@@ -61,7 +60,6 @@ public class AttributeBox : MonoBehaviour
         // ---------------------------------
     }
 
-    // populate attribute
     void PopulateAttribute()
     {
         // ---------------------------------
@@ -110,7 +108,6 @@ public class AttributeBox : MonoBehaviour
         // ---------------------------------
     }
 
-    // populate skill
     void PopulateSkill()
     {
         // ---------------------------------
@@ -161,7 +158,6 @@ public class AttributeBox : MonoBehaviour
 
 
 
-    // attribute skill or button rollover
     public void ButtonOver()
     {
         // ---------------------------------------
@@ -181,7 +177,6 @@ public class AttributeBox : MonoBehaviour
         // ---------------------------------------
     }
 
-    // attribute skill or button rollover
     public void ButtonExit()
     {
         RefreshCombatStatBoxes();
@@ -189,7 +184,6 @@ public class AttributeBox : MonoBehaviour
 
 
 
-    // button press
     public void ButtonPress()
     {
         if (Type == AttributeBoxType.Attribute)
@@ -206,7 +200,6 @@ public class AttributeBox : MonoBehaviour
         RefreshCombatStatBoxes();
     }
 
-    // refresh attributes (screens)
     public void RefreshAttributes()
     {
         if (newCharacterScreen)
@@ -221,7 +214,6 @@ public class AttributeBox : MonoBehaviour
         }
     }
 
-    // refresh skills (screens)
     public void RefreshSkills()
     {
         if (newCharacterScreen)
@@ -242,7 +234,6 @@ public class AttributeBox : MonoBehaviour
         }
     }
 
-    // refresh combat stats
     public void RefreshCombatStatBoxes()
     {
         if (newCharacterScreen)
@@ -253,7 +244,6 @@ public class AttributeBox : MonoBehaviour
 
 
 
-    // populate tooltips
     public void PopulateTooltip()
     {
         // attributes

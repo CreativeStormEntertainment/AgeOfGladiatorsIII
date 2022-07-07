@@ -31,7 +31,6 @@ public class MovementNode : MonoBehaviour
 
 
 
-    // open location from node
     public void ActivateNode(bool _travelMapNode)
     {
         // do not activate if hidden
@@ -60,7 +59,6 @@ public class MovementNode : MonoBehaviour
             SceneSwitch.SceneSwitcherAsync(destinationScene, destinationNode);
     }
 
-    // check for missions
     public void CheckForMissionUpdate()
     {
         if (Vector3.Distance(PlayerScene.instance.MainCharacter.transform.position, transform.position) <= 3)

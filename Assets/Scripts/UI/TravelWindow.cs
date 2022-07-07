@@ -31,7 +31,6 @@ public class TravelWindow : MonoBehaviour
 
 
 
-    // populate map
     public void PopulateMap()
     {
         // -----------------------------------------------------
@@ -84,7 +83,6 @@ public class TravelWindow : MonoBehaviour
 
 
 
-    // node click
     public void NodeClick()
     {
         // assign target node (and last node visited)
@@ -117,7 +115,6 @@ public class TravelWindow : MonoBehaviour
         }
     }
 
-    // move to node
     public void MoveToNode()
     {
         if (TargetNode == null)
@@ -134,7 +131,6 @@ public class TravelWindow : MonoBehaviour
         }
     }
 
-    // transition to new location
     void TransitionLocation()
     {
         switch (TargetNode.nodeNumber)
@@ -155,9 +151,6 @@ public class TravelWindow : MonoBehaviour
         UI.instance.CloseTravel();
     }
 
-
-
-    // assign tooltip to node
     void AssignTooltipToNode(TravelWindowNode _Node)
     {
         if (_Node.GetComponent<ModelShark.TooltipTrigger>() == null)

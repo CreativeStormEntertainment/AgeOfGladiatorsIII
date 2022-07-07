@@ -23,7 +23,6 @@ public class ViewItemBubble : MonoBehaviour
 
 
 
-    // formulate view blurb
     public void ForumulateViewBlurb(string _input, ViewItemActivator _activatorPassed)
     {
         ActivatorPassed = _activatorPassed;
@@ -38,7 +37,6 @@ public class ViewItemBubble : MonoBehaviour
 
 
 
-    // resize bubble
     void ResizeBubble(float _amount)
     {
         BackgroundRectTransform = GetComponent<RectTransform>();
@@ -47,7 +45,6 @@ public class ViewItemBubble : MonoBehaviour
         BackgroundRectTransform.sizeDelta = _backgroundSize;
     }
 
-    // close bubble timer
     IEnumerator CloseBubble()
     {
         yield return new WaitForSeconds(2);
@@ -55,7 +52,6 @@ public class ViewItemBubble : MonoBehaviour
         DestroyBubble();
     }
 
-    // destroy bubble
     public void DestroyBubble()
     {
         Destroy(gameObject);

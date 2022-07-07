@@ -23,7 +23,6 @@ public class TriggerMissionClick : MonoBehaviour
 
 
 
-    // update quest
     public void UpdateQuest()
     {
         if ((QuestLog.GetQuestState(questName) == QuestState.Active) && (QuestLog.GetQuestEntryState(questName, questEntry) == QuestState.Active))

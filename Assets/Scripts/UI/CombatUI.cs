@@ -42,7 +42,6 @@ public class CombatUI : MonoBehaviour
 
 
 
-    // update combat panel
     public void UpdateCombatPanel()
     {
         if (Combat.instance.Attacking.playerControlledCombat)
@@ -59,7 +58,6 @@ public class CombatUI : MonoBehaviour
             _Button.UpdateButton();
     }
 
-    // show combat ui
     public void ShowCombatUI()
     {
         //Debug.Log(GameMusic.Audio.clip.name);
@@ -75,7 +73,6 @@ public class CombatUI : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-    // hide combat ui
     public void HideCombatUI()
     {
         UI.instance.FadeInOutScreen.gameObject.SetActive(true);
@@ -90,7 +87,6 @@ public class CombatUI : MonoBehaviour
 
 
 
-    // show actions panel
     public void ShowActionsPanel()
     {
         // show panel
@@ -137,7 +133,6 @@ public class CombatUI : MonoBehaviour
         }
     }
 
-    // hide actions panel
     public void HideActionsPanel()
     {
         // hide panel

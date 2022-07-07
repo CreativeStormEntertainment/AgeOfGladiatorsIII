@@ -7,6 +7,7 @@ public class ActivateTravelNode : MonoBehaviour
     public MovementNode AttachedMovementNode;
 
 
+
     public void ActivateNode()
     {
         if (AttachedMovementNode != null && AttachedMovementNode.disabled)

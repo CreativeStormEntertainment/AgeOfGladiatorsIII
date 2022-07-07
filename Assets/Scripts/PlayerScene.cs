@@ -65,7 +65,6 @@ public class PlayerScene : MonoBehaviour
 
 
 
-    // reset player on start
     public void ResetPlayer()
     {
         instance = null;

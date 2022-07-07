@@ -23,7 +23,6 @@ public class TriggerPerception : MonoBehaviour
 
 
 
-    // roll perception check
     void PerceptionCheck()
     {
         if (Vector3.Distance(PlayerScene.instance.MainCharacter.transform.position, transform.position) <= 5)

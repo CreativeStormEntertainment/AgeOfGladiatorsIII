@@ -54,7 +54,6 @@ public class CharacterWindow : MonoBehaviour
 
 
 
-    // populate
     public void Populate()
     {
         SelectedCharacter = PlayerScene.instance.MainCharacter;
@@ -66,7 +65,6 @@ public class CharacterWindow : MonoBehaviour
 
 
 
-    // populate info
     public void PopulateInfo()
     {
         NameLabel.text = SelectedCharacter.characterName;
@@ -97,7 +95,6 @@ public class CharacterWindow : MonoBehaviour
         ExecutionsBox.Icon.GetComponent<ModelShark.TooltipTrigger>().SetText("BodyText", $"<color=#ffc149>Executions:</color> Amount of criminals you have executed.");
     }
 
-    // populate combat stats
     public void PopulateCombatStats()
     {
         // --------------------------------
@@ -151,7 +148,6 @@ public class CharacterWindow : MonoBehaviour
         // --------------------------------
     }
 
-    // populate attributes
     public void PopulateAttributes()
     {
         // --------------------------------
@@ -170,7 +166,6 @@ public class CharacterWindow : MonoBehaviour
         // --------------------------------
     }
 
-    // populate skills
     public void PopulateSkills()
     {
         // --------------------------------
@@ -201,9 +196,6 @@ public class CharacterWindow : MonoBehaviour
         // --------------------------------
     }
 
-
-
-    // populate portrait panel
     public void PopulatePortraitPanel()
     {
         Character3D.instance.PopulateModel(true, SelectedCharacter);
@@ -211,13 +203,11 @@ public class CharacterWindow : MonoBehaviour
 
 
 
-    // show head
     public void ShowHead()
     {
         Character3D.instance.ShowHead();
     }
 
-    // show body
     public void ShowBody()
     {
         Character3D.instance.ShowBody();
@@ -225,7 +215,6 @@ public class CharacterWindow : MonoBehaviour
 
 
 
-    // toggle
     public void ToggleSection(int _input)
     {
         ResetAll();
@@ -246,7 +235,6 @@ public class CharacterWindow : MonoBehaviour
         CheckButtons();
     }
 
-    // reset all
     void ResetAll()
     {
         AttributesSection.gameObject.SetActive(false);
@@ -254,7 +242,6 @@ public class CharacterWindow : MonoBehaviour
         ReputationSection.gameObject.SetActive(false);
     }
 
-    // check buttons
     void CheckButtons()
     {
         AttributesButton.interactable = true;
@@ -271,7 +258,6 @@ public class CharacterWindow : MonoBehaviour
             ReputationButton.interactable = false;
     }
 
-    // activate attributes
     void ActivateAttributes()
     {
         PopulatePortraitPanel();
@@ -283,13 +269,11 @@ public class CharacterWindow : MonoBehaviour
         AttributesSection.gameObject.SetActive(true);
     }
 
-    // activate perks
     void ActivatePerks()
     {
         PerksSection.gameObject.SetActive(true);
     }
 
-    // activate reputation
     void ActivateReputation()
     {
         ReputationSection.gameObject.SetActive(true);

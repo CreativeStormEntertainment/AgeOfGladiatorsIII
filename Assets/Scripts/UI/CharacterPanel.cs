@@ -23,7 +23,6 @@ public class CharacterPanel : MonoBehaviour
 
 
 
-    // populate
     public void Populate(Character _Character)
     {
         Portrait.sprite = PortraitSelector.FindPortrait(_Character, 2);
@@ -61,7 +60,6 @@ public class CharacterPanel : MonoBehaviour
         PopulateStatusIcons(_Character);
     }
 
-    // populate status icons
     void PopulateStatusIcons(Character _Character)
     {
         if (_Character.inCover)

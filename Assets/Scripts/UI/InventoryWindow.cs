@@ -37,7 +37,6 @@ public class InventoryWindow : MonoBehaviour
 
 
 
-    // populate inventory window
     public void Populate()
     {
         SelectedCharacter = PlayerScene.instance.MainCharacter;
@@ -56,7 +55,6 @@ public class InventoryWindow : MonoBehaviour
 
 
 
-    // populate character equipment
     public void PopulateCharacterEquipment()
     {
         // -------------------------------------
@@ -175,7 +173,6 @@ public class InventoryWindow : MonoBehaviour
         // -------------------------------------
     }
 
-    // populate inventory
     public void PopulateInventory()
     {
         // clear the grid and rebuild
@@ -203,7 +200,6 @@ public class InventoryWindow : MonoBehaviour
         }
     }
 
-    // populate selected item panel
     public void PopulateSelectedItem(Item _Item)
     {
         SelectedItemPanel.gameObject.SetActive(true);
@@ -211,7 +207,6 @@ public class InventoryWindow : MonoBehaviour
         SelectedItemPanel.PopulateSelectedItem(_Item, false);
     }
 
-    // populate selected item panel
     public void PopulateEquippedItem(Item _Item)
     {
         EquippedItemPanel.gameObject.SetActive(true);
@@ -219,7 +214,6 @@ public class InventoryWindow : MonoBehaviour
         EquippedItemPanel.PopulateSelectedItem(_Item, true);
     }
 
-    // populate portrait
     public void PopulatePortrait()
     {
         // update character portrait on screen
@@ -229,7 +223,6 @@ public class InventoryWindow : MonoBehaviour
         PlayerScene.instance.MainCharacter.UpdateEquipmentOnModel();
     }
 
-    // populate combat stats
     public void PopulateCombatStats()
     {
         // --------------------------------
@@ -317,13 +310,11 @@ public class InventoryWindow : MonoBehaviour
 
 
 
-    // show head
     public void ShowHead()
     {
         Character3D.instance.ShowHead();
     }
 
-    // show body
     public void ShowBody()
     {
         Character3D.instance.ShowBody();
@@ -331,7 +322,6 @@ public class InventoryWindow : MonoBehaviour
 
 
 
-    // add item to character
     public void AddItemToCharacter(Item _Item)
     {
         GameSounds.instance.PlayAddItem(_Item.ItemClass);
@@ -401,7 +391,6 @@ public class InventoryWindow : MonoBehaviour
         EquippedItemPanel.gameObject.SetActive(false);
     }
 
-    // remove item from character
     public void RemoveItemFromCharacter(Item _Item)
     {
         GameSounds.instance.PlayAddItem(_Item.ItemClass);

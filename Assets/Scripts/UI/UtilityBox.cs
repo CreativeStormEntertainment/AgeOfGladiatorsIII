@@ -5,7 +5,6 @@ using TMPro;
 
 public class UtilityBox : MonoBehaviour
 {
-    // populate
     public void Populate()
     {
     }

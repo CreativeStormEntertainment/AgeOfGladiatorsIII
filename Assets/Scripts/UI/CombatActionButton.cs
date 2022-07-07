@@ -13,7 +13,6 @@ public class CombatActionButton : MonoBehaviour, IPointerEnterHandler, IPointerE
 
 
 
-    // button press
     public void ButtonPress()
     {
         Combat.instance.ActionUse(ActionType);
@@ -23,7 +22,6 @@ public class CombatActionButton : MonoBehaviour, IPointerEnterHandler, IPointerE
 
 
 
-    // update button status
     public void UpdateButton()
     {
         // stun toggle
@@ -54,7 +52,6 @@ public class CombatActionButton : MonoBehaviour, IPointerEnterHandler, IPointerE
         }
     }
 
-    // get description
     public string GetDescription()
     {
         string _description = "None";
@@ -88,7 +85,6 @@ public class CombatActionButton : MonoBehaviour, IPointerEnterHandler, IPointerE
 
 
 
-    // mouse over
     public void OnPointerEnter(PointerEventData eventData)
     {
         UISounds.instance.PlayMouseOn(0);
@@ -97,7 +93,6 @@ public class CombatActionButton : MonoBehaviour, IPointerEnterHandler, IPointerE
         UI.instance.CombatUI.ActionLabel.gameObject.SetActive(true);
     }
 
-    // mouse exit
     public void OnPointerExit(PointerEventData eventData)
     {
         UI.instance.CombatUI.ActionLabel.gameObject.SetActive(false);

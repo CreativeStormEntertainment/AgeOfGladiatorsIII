@@ -20,7 +20,6 @@ public class LootWindow : MonoBehaviour
 
 
 
-    // populate inventory window
     public void Populate(MapItemContainer _Container)
     {
         SelectedContainer = _Container;
@@ -35,7 +34,8 @@ public class LootWindow : MonoBehaviour
         PopulateContainer();
     }
 
-    // populate container
+
+
     public void PopulateContainer()
     {
         // clear the grid and rebuild
@@ -62,7 +62,6 @@ public class LootWindow : MonoBehaviour
         }
     }
 
-    // populate selected item
     public void PopulateSelectedItem(Item _Item)
     {
         SelectedItemPanel.gameObject.SetActive(true);
@@ -71,7 +70,6 @@ public class LootWindow : MonoBehaviour
 
 
 
-    // add item
     void AddItem(Item _Item)
     {
         SelectedContainer.ContainedItems.Remove(_Item);
@@ -88,7 +86,6 @@ public class LootWindow : MonoBehaviour
             Populate(SelectedContainer);
     }
 
-    // add all items
     public void AddAllItems()
     {
         foreach (Item _Item in SelectedContainer.ContainedItems)

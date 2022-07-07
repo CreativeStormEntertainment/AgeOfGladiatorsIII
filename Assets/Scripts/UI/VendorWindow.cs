@@ -32,7 +32,6 @@ public class VendorWindow : MonoBehaviour
 
 
 
-    // populate inventory window
     public void Populate(int _vendorNumber)
     {
         vendorNumber = _vendorNumber;
@@ -46,7 +45,6 @@ public class VendorWindow : MonoBehaviour
 
 
 
-    // populate inventory
     public void PopulateInventory()
     {
         // clear the grid and rebuild
@@ -73,7 +71,7 @@ public class VendorWindow : MonoBehaviour
                 _ItemBox.BoxButton.onClick.AddListener(() => SellItem(_Item));
 
                 // do not allow selling if not enough coin
-                if (_Item.CalculateCost() > SelectedVendor.credits)
+                if (_Item.CalculateCost() > SelectedVendor.gold)
                     _ItemBox.BoxButton.enabled = false;
                 else
                     _ItemBox.BoxButton.enabled = true;
@@ -81,7 +79,6 @@ public class VendorWindow : MonoBehaviour
         }
     }
 
-    // populate vendor
     public void PopulateVendor()
     {
         // clear the grid and rebuild
@@ -112,13 +109,10 @@ public class VendorWindow : MonoBehaviour
         }
     }
 
-
-
-    // populate coin labels
     public void PopulateCoinLabels()
     {
         PartyCoinLine.Label.text = PlayerScene.instance.MainCharacter.credits.ToString("n0");
-        VendorCoinLine.Label.text = SelectedVendor.credits.ToString("n0");
+        VendorCoinLine.Label.text = SelectedVendor.gold.ToString("n0");
 
         PartyCoinLine.Icon.GetComponent<ModelShark.TooltipTrigger>().SetText("BodyText", $"<color=#ffc149>Player Credits</color>");
         VendorCoinLine.Icon.GetComponent<ModelShark.TooltipTrigger>().SetText("BodyText", $"<color=#ffc149>Vendor Credits</color>");
@@ -126,7 +120,6 @@ public class VendorWindow : MonoBehaviour
 
 
 
-    // populate selected item
     public void PopulateSelectedItem(Item _Item)
     {
         SelectedItemPanel.gameObject.SetActive(true);
@@ -156,7 +149,6 @@ public class VendorWindow : MonoBehaviour
         }
     }
 
-    // populate selected item panel
     public void PopulateEquippedItem(Item _Item)
     {
         EquippedItemPanel.gameObject.SetActive(true);
@@ -165,25 +157,24 @@ public class VendorWindow : MonoBehaviour
     }
 
 
-    // buy item
+
     void BuyItem(Item _Item)
     {
         SelectedVendor.VendorList.Remove(_Item);
         Inventory.AddToInventory(_Item); ;
 
-        SelectedVendor.credits += _Item.CalculateCost();
+        SelectedVendor.gold += _Item.CalculateCost();
         PlayerScene.instance.MainCharacter.credits -= _Item.CalculateCost();
 
         Populate(vendorNumber);
     }
 
-    // sell item
     void SellItem(Item _Item)
     {
         SelectedVendor.VendorList.Add(_Item);
         Inventory.RemoveFromInventory(_Item);
 
-        SelectedVendor.credits -= _Item.CalculateCost();
+        SelectedVendor.gold -= _Item.CalculateCost();
         PlayerScene.instance.MainCharacter.credits += _Item.CalculateCost();
 
         Populate(vendorNumber);

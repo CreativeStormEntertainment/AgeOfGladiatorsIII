@@ -120,6 +120,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BendNormalsFreq: 4
     - _BendNormalsStrength: 0.05
@@ -295,7 +296,7 @@ Material:
     - _SpecColor: {r: 0.5882403, g: 0.5882403, b: 0.5882403, a: 0.7}
     - _SpecColor2: {r: 1, g: 1, b: 1, a: 1}
     - _Tan2ObjectMultOffset: {r: 0, g: 0, b: 1, a: 1}
-    - _TintColor: {r: 0.63011235, g: 0.6631813, b: 0.7416238, a: 1}
+    - _TintColor: {r: 0.92475325, g: 0.9314805, b: 0.9474382, a: 1}
     - _TranslucencyColor: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucencyColor2: {r: 1, g: 1, b: 1, a: 1}
     - _UV_Clip_Borders: {r: 0, g: 0, b: 1, a: 1}
@@ -304,3 +305,4 @@ Material:
     - bumpMap2TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - bumpMapTexelSize: {r: 0.00390625, g: 0.00390625, b: 256, a: 256}
     - heightMapTexelSize: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

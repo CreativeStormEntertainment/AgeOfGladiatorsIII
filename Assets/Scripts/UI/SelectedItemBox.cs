@@ -22,7 +22,6 @@ public class SelectedItemBox : MonoBehaviour
 
 
 
-    // populate selected item
     public void PopulateSelectedItem(Item _Item, bool _equipped)
     {
         SelectedItem = _Item;

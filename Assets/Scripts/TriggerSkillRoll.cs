@@ -27,7 +27,6 @@ public class TriggerSkillRoll : MonoBehaviour
 
 
 
-    // attempt to unlock item
     public void AttemptItemSkillRoll()
     {
         // audio
@@ -42,7 +41,6 @@ public class TriggerSkillRoll : MonoBehaviour
         StartCoroutine(OpenConclusionTimer());
     }
 
-    // conclusion timer
     public IEnumerator OpenConclusionTimer()
     {
         yield return new WaitForSeconds(2f);
@@ -53,7 +51,6 @@ public class TriggerSkillRoll : MonoBehaviour
         PlayerScene.instance.MainCharacter.GetComponent<PlayerCharacterMovement>().restrictMovement = false;
     }
 
-    // attempt to unlock item
     void CompleteAttemptSkillLevel()
     {
         // stat
@@ -78,12 +75,10 @@ public class TriggerSkillRoll : MonoBehaviour
 
 
 
-    // unlock conditions
     void UnlockConditions()
     {
     }
 
-    // alert text
     void AlertText(string _incoming)
     {
         // stat

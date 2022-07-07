@@ -13,7 +13,6 @@ public class MissionBox : MonoBehaviour
 
 
 
-    // populate
     public void Populate(string _questName, double _questEntry)
     {
         // ----------------------------------

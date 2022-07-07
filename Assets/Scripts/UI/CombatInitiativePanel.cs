@@ -9,7 +9,6 @@ public class CombatInitiativePanel : MonoBehaviour
 
 
 
-    // populate
     public void Populate()
     {
         // clear the conversation options grid
@@ -28,10 +27,6 @@ public class CombatInitiativePanel : MonoBehaviour
 
                 _prefab.GetComponent<InitiativePortrait>().Portrait.sprite = PortraitSelector.FindPortrait(_Character, 1);
                 _prefab.GetComponent<InitiativePortrait>().AttachedCharacter = _Character;
-
-                //Debug.Log(_Character.combatHealth);
-                //_prefab.GetComponent<InitiativePortrait>().HitpointSlider.value = _Character.combatHealth;
-                //_prefab.GetComponent<InitiativePortrait>().HitpointSlider.maxValue = _Character.GetHealth();
             }
         }
     }
