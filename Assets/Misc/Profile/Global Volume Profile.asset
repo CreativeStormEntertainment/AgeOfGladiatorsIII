@@ -186,10 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.022
+    m_Value: 0
 --- !u!114 &-420465024864896315
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -213,10 +213,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: -0.09341093}
   shadowsStart:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.04
   shadowsEnd:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.04
   highlightsStart:
     m_OverrideState: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
     m_Value: 3
   intensity:
     m_OverrideState: 1
-    m_Value: 0.16
+    m_Value: 0.019
   response:
     m_OverrideState: 1
     m_Value: 1
@@ -554,10 +554,10 @@ MonoBehaviour:
     m_Value: 5.45
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 11
   saturation:
     m_OverrideState: 1
     m_Value: 29.47
