@@ -1,18 +1,10 @@
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
-/// <summary>
-/// Scene auto loader.
-/// </summary>
-/// <description>
-/// This class adds a File > Scene Autoload menu containing options to select
-/// a "master scene" enable it to be auto-loaded when the user presses play
-/// in the editor. When enabled, the selected scene will be loaded on play,
-/// then the original scene will be reloaded on stop.
-///
-/// Based on an idea on this thread:
-/// http://forum.unity3d.com/threads/157502-Executing-first-scene-in-build-settings-when-pressing-play-button-in-editor
-/// </description>
+// note: this was added so that Deadfall-Start scene always plays first when pushing play button
+
+
 [InitializeOnLoad]
 static class SceneAutoLoader
 {
@@ -20,14 +12,15 @@ static class SceneAutoLoader
     // [InitializeOnLoad] above makes sure this gets executed.
     static SceneAutoLoader()
     {
-        EditorApplication.playmodeStateChanged += OnPlayModeChanged;
+        EditorApplication.playModeStateChanged += OnPlayModeChanged;
     }
 
     // Menu items to select the "master" scene and control whether or not to load it.
     [MenuItem("File/Scene Autoload/Select Master Scene...")]
     private static void SelectMasterScene()
     {
-        string masterScene = EditorUtility.OpenFilePanel("Select Master Scene", Application.dataPath, "unity");
+        string masterScene = "Assets/Scenes/Master.unity";
+        masterScene = masterScene.Replace(Application.dataPath, "Assets");  //project relative instead of absolute path
         if (!string.IsNullOrEmpty(masterScene))
         {
             MasterScene = masterScene;
@@ -58,7 +51,7 @@ static class SceneAutoLoader
     }
 
     // Play mode change callback handles the scene load/reload.
-    private static void OnPlayModeChanged()
+    private static void OnPlayModeChanged(PlayModeStateChange state)
     {
         if (!LoadMasterOnPlay)
         {
@@ -68,13 +61,18 @@ static class SceneAutoLoader
         if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode)
         {
             // User pressed play -- autoload master scene.
-            PreviousScene = EditorApplication.currentScene;
-            if (EditorApplication.SaveCurrentSceneIfUserWantsTo())
+            PreviousScene = EditorSceneManager.GetActiveScene().path;
+            if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
             {
-                if (!EditorApplication.OpenScene(MasterScene))
+                try
+                {
+                    EditorSceneManager.OpenScene(MasterScene);
+                }
+                catch
                 {
                     Debug.LogError(string.Format("error: scene not found: {0}", MasterScene));
                     EditorApplication.isPlaying = false;
+
                 }
             }
             else
@@ -83,10 +81,16 @@ static class SceneAutoLoader
                 EditorApplication.isPlaying = false;
             }
         }
-        if (EditorApplication.isPlaying && !EditorApplication.isPlayingOrWillChangePlaymode)
+
+        // isPlaying check required because cannot OpenScene while playing
+        if (!EditorApplication.isPlaying && !EditorApplication.isPlayingOrWillChangePlaymode)
         {
             // User pressed stop -- reload previous scene.
-            if (!EditorApplication.OpenScene(PreviousScene))
+            try
+            {
+                EditorSceneManager.OpenScene(PreviousScene);
+            }
+            catch
             {
                 Debug.LogError(string.Format("error: scene not found: {0}", PreviousScene));
             }
@@ -112,7 +116,7 @@ static class SceneAutoLoader
 
     private static string PreviousScene
     {
-        get { return EditorPrefs.GetString(cEditorPrefPreviousScene, EditorApplication.currentScene); }
+        get { return EditorPrefs.GetString(cEditorPrefPreviousScene, EditorSceneManager.GetActiveScene().path); }
         set { EditorPrefs.SetString(cEditorPrefPreviousScene, value); }
     }
 }
