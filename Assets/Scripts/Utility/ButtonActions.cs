@@ -12,7 +12,6 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 
 
-    // on pointer enter
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (GetComponent<Button>().interactable)
@@ -37,14 +36,12 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             UISounds.instance.PlayMouseOn(0);
     }
 
-    // on pointer exit
     public void OnPointerExit(PointerEventData eventData)
     {
         if (GetComponent<Button>().interactable)
             MouseOff();
     }
 
-    // on pointer down
     public void OnPointerDown(PointerEventData eventData)
     {
         if (ButtonType == ButtonType.Small)
@@ -70,7 +67,6 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 
 
-    // mouse on
     void MouseOn()
     {
         if (noRollver)
@@ -89,7 +85,6 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             ButtonSprite.GetComponent<Image>().sprite = ButtonList.instance.ButtonsTab[1];
     }
 
-    // mouse off
     void MouseOff()
     {
         if (noRollver)
@@ -110,7 +105,6 @@ public class ButtonActions : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 
 
-    // turn off rollover on button press
     public void TurnOffRollOverOnPress()
     {
         MouseOff();

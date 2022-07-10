@@ -10,7 +10,6 @@ public static class SceneSwitch
 
 
 
-    // switch new scene
     public static void SceneSwitcher(string _name, int _nodeNumber)
     {
         // determine which node to spawn character on

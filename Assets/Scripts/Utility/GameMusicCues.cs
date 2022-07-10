@@ -31,7 +31,6 @@ public class GameMusicCues : MonoBehaviour
 
 
 
-    // play music cue (enum)
     public void PlayMusicCue(MusicCues _Cue)
     {
         if (_Cue == MusicCues.None)
@@ -60,7 +59,6 @@ public class GameMusicCues : MonoBehaviour
         }
     }
 
-    // play music cue
     public void PlayMusicCue(AudioClip[] _Array, int _index)
     {
         // fade out ambient music
@@ -73,13 +71,12 @@ public class GameMusicCues : MonoBehaviour
         StartCoroutine(FadeBackInAmbientMusic((_Array[_index].length - 1)));
     }
 
-    // play combat intro (needs to be here)
     public void PlayCombatIntro()
     {
+        // needs to be here
         Audio.PlayOneShot(CombatInMusic[0]);
     }
 
-    // fade back in ambient music
     public IEnumerator FadeBackInAmbientMusic(float _seconds)
     {
         yield return new WaitForSeconds(_seconds);

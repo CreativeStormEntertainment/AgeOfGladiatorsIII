@@ -16,6 +16,8 @@ public class CameraZoom : MonoBehaviour
     private float zoomTarget;
     private float zoom;
 
+
+
     void Update()
     {
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
@@ -32,6 +34,8 @@ public class CameraZoom : MonoBehaviour
             CalcZoom(zoom);
         }
     }
+
+
 
     public void CalcZoom(float zoom)
     {

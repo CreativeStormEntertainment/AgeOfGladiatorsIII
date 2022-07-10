@@ -4,7 +4,6 @@ using UnityEngine;
 
 public static class LocateOpenMap
 {
-    // find current open map and return it
     public static Map GetOpenMap()
     {
         Map _OpenMap = null;

@@ -43,79 +43,66 @@ public class UISounds : MonoBehaviour
 
 
 
-    // regular
     public void PlayRegularButton()
     {
         Audio.PlayOneShot(Regular[0]);
     }
 
-    // large
     public void PlayLargeButton()
     {
         Audio.PlayOneShot(Large[0]);
     }
 
-    // small
     public void PlaySmallButton()
     {
         Audio.PlayOneShot(Small[0]);
     }
 
-    // tab
     public void PlayTabButton()
     {
         Audio.PlayOneShot(Tab[0]);
     }
 
-    // close
     public void PlayCloseButton()
     {
         Audio.PlayOneShot(Close[0]);
     }
 
-    // pip
     public void PlayPipButton()
     {
         Audio.PlayOneShot(Pip[0]);
     }
 
-    // mouse on
     public void PlayMouseOn(int _index)
     {
         Audio.PlayOneShot(Hover[_index]);
     }
 
-    // mouse on (travel node)
     public void PlayMouseOnNode()
     {
         Audio.PlayOneShot(MouseOnNode[0]);
     }
 
-    // mouse on
     public void PlayWindowOpen()
     {
         Audio.PlayOneShot(WindowOpen[0]);
     }
 
-    // skill succeeed
     public void PlaySkillSucceed()
     {
         Audio.PlayOneShot(SkillSucceed[0]);
     }
 
-    // skill fail
     public void PlaySkillFail()
     {
         Audio.PlayOneShot(SkillFail[0]);
     }
 
-    // skill fail
     public void PlayActionNotPossible()
     {
         Audio.PlayOneShot(ActionNotPossible[0]);
     }
 
-    // travel sound
     public void PlayActionTravel()
     {
         Audio.PlayOneShot(TravelSound[0]);

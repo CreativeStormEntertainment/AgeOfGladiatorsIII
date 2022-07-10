@@ -51,7 +51,6 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // play menu music
     public void PlayMenuMusic()
     {
         Audio.loop = false;
@@ -61,7 +60,6 @@ public class GameMusic : MonoBehaviour
         Audio.Play();
     }
 
-    // play ambient music
     public void PlayAmbientMusic()
     {
         Audio.loop = false;
@@ -69,7 +67,6 @@ public class GameMusic : MonoBehaviour
         playAmbientMusic = true;
     }
 
-    // play event music
     public void PlayEventMusic()
     {
         Audio.loop = true;
@@ -79,7 +76,6 @@ public class GameMusic : MonoBehaviour
         Audio.Play();
     }
 
-    // play combat music
     public void PlayCombatMusic()
     {
         Audio.loop = true;
@@ -97,7 +93,6 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // find random ambient track
     public void ChooseAndPlayAmbientTrack()
     {
         while (randomTrack == lastTrack)
@@ -110,7 +105,6 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // music - stop
     public void StopMusic()
     {
         Audio.Stop();
@@ -118,13 +112,11 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // music - fade out
     public void FadeOutMusic(float _speed)
     {
         StartCoroutine(AudioFade.StartFade(Audio, _speed, 0));
     }
 
-    // music - fade in
     public void FadeInMusic(float _speed)
     {
         StartCoroutine(AudioFade.StartFade(Audio, _speed, PlayerPrefs.GetFloat("musicVolume")));
@@ -132,14 +124,12 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // transition to menu music
     public void TransitionToMenuMusic(float _fadeTime)
     {
         //StartCoroutine(AudioFade.StartFade(Audio, fadeTime, 0));
         StartCoroutine(WaitToGoToStartMenuMusic(_fadeTime));
     }
 
-    // wait to start combat music
     public IEnumerator WaitToGoToStartMenuMusic(float _fadeTime)
     {
         yield return new WaitForSeconds(_fadeTime);
@@ -149,14 +139,12 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // transition to combat music
     public void TransitionToCombatMusic(float _fadeTime)
     {
         FadeOutMusic(_fadeTime);
         StartCoroutine(WaitToGoToStartCombatMusic(_fadeTime));
     }
 
-    // wait to start combat music
     public IEnumerator WaitToGoToStartCombatMusic(float _fadeTime)
     {
         yield return new WaitForSeconds(_fadeTime);
@@ -166,14 +154,12 @@ public class GameMusic : MonoBehaviour
 
 
 
-    // transition to ambient music
     public void TransitionToAmbient(float _fadeTime)
     {
         FadeOutMusic(_fadeTime);
         StartCoroutine(WaitToGoToStartAmbientMusic(_fadeTime));
     }
 
-    // wait to start ambient music
     public IEnumerator WaitToGoToStartAmbientMusic(float _fadeTime)
     {
         yield return new WaitForSeconds(_fadeTime);
@@ -183,15 +169,12 @@ public class GameMusic : MonoBehaviour
 
 
 
-
-    // transition to event music
     public void TransitionToEventMusic(float _fadeTime)
     {
         FadeOutMusic(_fadeTime);
         StartCoroutine(WaitToGoToStartEventMusic(_fadeTime));
     }
 
-    // wait to start event music
     public IEnumerator WaitToGoToStartEventMusic(float _fadeTime)
     {
         yield return new WaitForSeconds(_fadeTime);

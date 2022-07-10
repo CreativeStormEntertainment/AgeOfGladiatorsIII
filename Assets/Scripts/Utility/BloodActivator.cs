@@ -16,7 +16,6 @@ public class BloodActivator : MonoBehaviour
 
 
 
-    // activate (shot)
     public void ActivateShotBloodSplatter()
     {
         BloodSplatters[0].gameObject.SetActive(true);
@@ -24,7 +23,8 @@ public class BloodActivator : MonoBehaviour
         StartCoroutine(BloodSplatterTimer());
     }
 
-    // activate (cut)
+
+
     public void ActivateCutBloodSplatter()
     {
         BloodSplatters[0].gameObject.SetActive(true);
@@ -32,7 +32,6 @@ public class BloodActivator : MonoBehaviour
         StartCoroutine(BloodSplatterTimer());
     }
 
-    // activate (shotgun)
     public void ActivateShotgunBloodSplatter()
     {
         BloodSplatters[0].gameObject.SetActive(true);
@@ -40,7 +39,6 @@ public class BloodActivator : MonoBehaviour
         StartCoroutine(BloodSplatterTimer());
     }
 
-    // activate (heavy)
     public void ActivateHeavyBloodSplatter()
     {
         BloodSplatters[0].gameObject.SetActive(true);
@@ -48,7 +46,6 @@ public class BloodActivator : MonoBehaviour
         StartCoroutine(BloodSplatterTimer());
     }
 
-    // activate (kill)
     public void ActivateKillBloodSplatter()
     {
         BloodSplatters[0].gameObject.SetActive(true);
@@ -58,7 +55,6 @@ public class BloodActivator : MonoBehaviour
 
 
 
-    // timer
     public IEnumerator BloodSplatterTimer()
     {
         yield return new WaitForSeconds(0.5f);
@@ -66,7 +62,6 @@ public class BloodActivator : MonoBehaviour
         DeactivateBloodSplatter();
     }
 
-    // deactivate
     public void DeactivateBloodSplatter()
     {
         foreach (GameObject _Blood in BloodSplatters)

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public static class PopulateCombatStatsRollover
 {
-    // populate combat stat change during rollover
     public static void Rollover(Attribute _Attribute, List<IconLabelBox> _List)
     {
         // ---------------------------------------
@@ -58,7 +57,6 @@ public static class PopulateCombatStatsRollover
         // ---------------------------------------
     }
 
-    // populate combat stat change during rollover
     public static void Rollover(Skill _Skill, List<IconLabelBox> _List)
     {
         // ---------------------------------------
@@ -93,7 +91,6 @@ public static class PopulateCombatStatsRollover
         // ---------------------------------------
     }
 
-    // populate combat stat change during rollover
     public static void Rollover(Item _Item, List<IconLabelBox> _List)
     {
         // ---------------------------------------
@@ -129,7 +126,6 @@ public static class PopulateCombatStatsRollover
 
 
 
-    // compare item
     public static string CompareItem(Item _Item, CombatStats _Stat)
     {
         // -----------------------------------
@@ -247,7 +243,6 @@ public static class PopulateCombatStatsRollover
 
 
 
-    // add plus or minus in front
     static string PlusMinus(int _amount)
     {
         string _prefix;
@@ -265,7 +260,6 @@ public static class PopulateCombatStatsRollover
             return _prefix = "--";
     }
 
-    // add plus or minus in front - invert
     static string PlusMinusInvert(int _amount)
     {
         string _prefix;

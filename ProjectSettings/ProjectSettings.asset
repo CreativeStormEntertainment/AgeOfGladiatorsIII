@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Creative Storm
   productName: Age of Gladiators III - Life Is Combat
-  defaultCursor: {fileID: 2800000, guid: 851a584cca8ed1d489cfd04510c1694b, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 84a3b256f1ec6d84dac6ce3f4a617600, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1

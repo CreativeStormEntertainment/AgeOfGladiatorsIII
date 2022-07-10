@@ -16,7 +16,6 @@ public class MuzzleFlash : MonoBehaviour
 
 
 
-    // activate
     public void ActivateMuzzleFlash()
     {
         MuzzleBurst.gameObject.SetActive(true);
@@ -24,7 +23,6 @@ public class MuzzleFlash : MonoBehaviour
         StartCoroutine(MuzzleFlashTimer());
     }
 
-    // timer
     public IEnumerator MuzzleFlashTimer()
     {
         yield return new WaitForSeconds(0.03f);
@@ -32,7 +30,6 @@ public class MuzzleFlash : MonoBehaviour
         DeactivateMuzzleFlash();
     }
 
-    // deactivate
     public void DeactivateMuzzleFlash()
     {
         MuzzleBurst.gameObject.SetActive(false);

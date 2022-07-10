@@ -20,7 +20,6 @@ public class MouseOver : MonoBehaviour
 
 
 
-    // change cursor
     void ChangeCursor()
     {
         if (GetComponentInParent<NPC>() != null)
@@ -54,7 +53,6 @@ public class MouseOver : MonoBehaviour
 
 
 
-    // on mouse over
     private void OnMouseEnter()
     {
         // -----------------------
@@ -106,7 +104,6 @@ public class MouseOver : MonoBehaviour
 
     }
 
-    // on mouse exit
     private void OnMouseExit()
     {
         // -----------------------
@@ -132,7 +129,6 @@ public class MouseOver : MonoBehaviour
         mouseOver = false;
     }
 
-    // on mouse over
     private void OnMouseOver()
     {
         if (EventSystem.current.IsPointerOverGameObject())

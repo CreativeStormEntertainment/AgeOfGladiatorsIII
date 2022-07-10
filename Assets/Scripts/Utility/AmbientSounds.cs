@@ -28,14 +28,12 @@ public class AmbientSounds : MonoBehaviour
 
 
 
-    // ambient - play
     public void PlayAmbient(int _index)
     {
         Audio.clip = CitySounds[_index];
         Audio.Play();
     }
 
-    // ambient - stop
     public void StopAmbient()
     {
         Audio.Stop();
@@ -43,13 +41,11 @@ public class AmbientSounds : MonoBehaviour
 
 
 
-    // music - fade out
     public void FadeOut(float _speed)
     {
         StartCoroutine(AudioFade.StartFade(Audio, _speed, 0));
     }
 
-    // music - fade in
     public void FadeIn(float _speed)
     {
         StartCoroutine(AudioFade.StartFade(Audio, _speed, PlayerPrefs.GetFloat("musicVolume")));
@@ -57,7 +53,6 @@ public class AmbientSounds : MonoBehaviour
 
 
 
-    // transition to combat music
     public void TransitionToAmbient(float _fadeTime, int _index)
     {
         FadeOut(_fadeTime);
@@ -68,7 +63,6 @@ public class AmbientSounds : MonoBehaviour
             StopAmbient();
     }
 
-    // wait to start combat music
     public IEnumerator WaitToStart(float _fadeTime, int _index)
     {
         yield return new WaitForSeconds(_fadeTime);

@@ -9,7 +9,6 @@ public class EquipNPC : MonoBehaviour
 
 
 
-    // equip weapon on start
     public void EquipWeaponOnStart()
     {
         if (GetComponent<Character>().EquippedWeapon == null && EquipTypeOfWeapon != WeaponTypes.Unarmed)

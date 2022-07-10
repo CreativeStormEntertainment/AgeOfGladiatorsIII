@@ -21,7 +21,6 @@ public class GameSounds : MonoBehaviour
     public AudioClip[] Lock;
     public AudioClip[] Crate;
     public AudioClip[] Radio;
-    public AudioClip[] Crime;
     public AudioClip[] Loot;
     public AudioClip[] Craft;
     public AudioClip[] Perception;
@@ -30,6 +29,7 @@ public class GameSounds : MonoBehaviour
     public AudioClip[] SkillComputer;
 
     public AudioClip[] Other;
+
 
 
     private void Awake()
@@ -47,7 +47,6 @@ public class GameSounds : MonoBehaviour
 
 
 
-    // play audio cue (enum)
     public void PlayAudioCue(AudioCues _Cue)
     {
         if (_Cue == AudioCues.None)
@@ -70,9 +69,6 @@ public class GameSounds : MonoBehaviour
             case AudioCues.Radio:
                 PlayRadio();
                 break;
-            case AudioCues.Crime:
-                PlayCrime();
-                break;
             case AudioCues.Loot:
                 PlayLoot();
                 break;
@@ -85,7 +81,6 @@ public class GameSounds : MonoBehaviour
         }
     }
 
-    // play audio cue (enum)
     public void PlayAudioCue(Skill _Skill)
     {
         if (_Skill == Skill.None)
@@ -104,7 +99,6 @@ public class GameSounds : MonoBehaviour
 
 
 
-    // add item
     public void PlayAddItem(ItemClasses _Type)
     {
         switch (_Type)
@@ -144,84 +138,66 @@ public class GameSounds : MonoBehaviour
 
 
 
-    // computer
     public void PlayComputer()
     {
         Audio.clip = Computer[0];
         Audio.Play();
     }
 
-    // door
     public void PlayDoor()
     {
         Audio.clip = Door[0];
         Audio.Play();
     }
 
-    // lock
     public void PlayLock()
     {
         Audio.clip = Lock[0];
         Audio.Play();
     }
 
-    // crate
     public void PlayCrate()
     {
         Audio.clip = Crate[Random.Range(0, Crate.Length)];
         Audio.Play();
     }
 
-    // radio
     public void PlayRadio()
     {
         Audio.clip = Radio[0];
         Audio.Play();
     }
 
-    // crime
-    public void PlayCrime()
-    {
-        Audio.clip = Crime[0];
-        Audio.Play();
-    }
-
-    // loot
     public void PlayLoot()
     {
         Audio.clip = Loot[Random.Range(0, Loot.Length)];
         Audio.Play();
     }
 
-    // craft
     public void PlayCraft()
     {
         Audio.clip = Craft[0];
         Audio.Play();
     }
 
-    // perception
     public void PlayPerception()
     {
         Audio.clip = Perception[0];
         Audio.Play();
     }
 
-    // door (skill)
     public void PlaySkillDoor()
     {
         Audio.clip = SkillDoor[0];
         Audio.Play();
     }
 
-    // crate (skill)
     public void PlaySkillCrate()
     {
         Audio.clip = SkillCrate[0];
         Audio.Play();
     }
 
-    // computer (skill)
     public void PlaySkillComputer()
     {
         Audio.clip = SkillComputer[0];
@@ -229,7 +205,7 @@ public class GameSounds : MonoBehaviour
     }
 
 
-    // other
+
     public void PlayOther(int _index)
     {
         Audio.clip = Other[_index];

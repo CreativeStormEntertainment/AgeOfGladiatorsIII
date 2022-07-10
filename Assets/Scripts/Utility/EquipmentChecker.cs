@@ -18,7 +18,6 @@ public class EquipmentChecker : MonoBehaviour
 
 
 
-    // check equipment
     public void CheckEquipment(Character _Character, Transform _Parent, bool _characterScreen)
     {
         RemoveItem(_Parent, "Helmet", _Parent.transform.GetComponentInChildren<BodyManager>().BaseHair);
@@ -81,7 +80,6 @@ public class EquipmentChecker : MonoBehaviour
 
 
 
-    // add item to model
     void AddItem(Transform _Parent, bool _characterScreen, GameObject[] _Array, int _index, GameObject _BasePart)
     {
         // deactivate base part
@@ -105,7 +103,6 @@ public class EquipmentChecker : MonoBehaviour
         }
     }
 
-    // remove item from model
     void RemoveItem(Transform _Parent, string _input, GameObject _BasePart)
     {
         foreach (Transform child in _Parent.transform)

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public static class GenerateItem
 {
-    // generate random weapon
     public static Weapon RandomGenerateWeapon()
     {
         //WeaponTypes _Type = EnumList.GetRandomEnum<WeaponTypes>();
@@ -16,7 +15,6 @@ public static class GenerateItem
         return _Item;
     }
 
-    // generate random helmet
     public static Helmet RandomGenerateHelmet()
     {
         ArmorTypes _Type = EnumList.GetRandomEnum<ArmorTypes>();
@@ -26,7 +24,6 @@ public static class GenerateItem
         return _Item;
     }
 
-    // generate random chest
     public static Chest RandomGenerateChest()
     {
         ArmorTypes _Type = EnumList.GetRandomEnum<ArmorTypes>();
@@ -36,7 +33,6 @@ public static class GenerateItem
         return _Item;
     }
 
-    // generate random legs
     public static Legs RandomGenerateLegs()
     {
         ArmorTypes _Type = EnumList.GetRandomEnum<ArmorTypes>();
@@ -46,7 +42,6 @@ public static class GenerateItem
         return _Item;
     }
 
-    // generate random legs
     public static Boots RandomGenerateBoots()
     {
         ArmorTypes _Type = EnumList.GetRandomEnum<ArmorTypes>();
@@ -56,7 +51,6 @@ public static class GenerateItem
         return _Item;
     }
 
-    // generate random hands
     public static Gloves RandomGenerateGloves()
     {
         ArmorTypes _Type = EnumList.GetRandomEnum<ArmorTypes>();

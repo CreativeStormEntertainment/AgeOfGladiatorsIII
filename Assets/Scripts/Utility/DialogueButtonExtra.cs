@@ -12,13 +12,11 @@ public class DialogueButtonExtra : MonoBehaviour
 
 
 
-    // audio (hover)
     public void HoverAudio()
     {
         UISounds.instance.PlayMouseOn(0);
     }
 
-    // audio (click)
     public void ClickAudio()
     {
         if (GetComponent<StandardUIResponseButton>().isClickable)
@@ -27,7 +25,6 @@ public class DialogueButtonExtra : MonoBehaviour
 
 
 
-    // hover (graphic)
     public void HoverGraphic(bool _hover)
     {
         if (_hover)

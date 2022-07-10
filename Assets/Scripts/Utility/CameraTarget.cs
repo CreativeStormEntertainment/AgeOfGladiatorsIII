@@ -16,6 +16,8 @@ public class CameraTarget : MonoBehaviour
     private float elapsedTime;
     private float doubleClickTime = 0.4f;
 
+
+
     void Update()
     {
         // -------------------------------------------------
@@ -67,6 +69,8 @@ public class CameraTarget : MonoBehaviour
         }
 
     }
+
+
 
     public void ChangeTarget(Transform tar)
     {

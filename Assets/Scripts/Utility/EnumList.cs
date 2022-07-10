@@ -15,7 +15,6 @@ public enum MissionNames
     StreetPatrol
 }
 // -------------------------------------------
-// -------------------------------------------
 // conversant names
 public enum NPCConversantNames
 {
@@ -37,7 +36,6 @@ public enum NPCConversantNames
     NomiSmith
 }
 // -------------------------------------------
-// -------------------------------------------
 // conversant names
 public enum NPCSpecialNames
 {
@@ -48,28 +46,12 @@ public enum NPCSpecialNames
     BabyBobNicely, // for television
 }
 // -------------------------------------------
-// -------------------------------------------
-// crimes
-public enum Crimes
-{
-    None,
-    Littering,
-    HostageTaking,
-    IllegalBroadcast,
-    Tobacco,
-    ProhibitedSubstance,
-}
-// -------------------------------------------
-
-// -------------------------------------------
 // character species
 public enum CharacterSpecies
 {
     Human,
     Ape,
-    Robot
 }
-// -------------------------------------------
 // -------------------------------------------
 // attributes
 public enum Attribute
@@ -82,7 +64,6 @@ public enum Attribute
     Aggression,
     Intelligence
 }
-// -------------------------------------------
 // -------------------------------------------
 // skills
 public enum Skill
@@ -108,7 +89,6 @@ public enum Skill
     Athletics
 }
 // -------------------------------------------
-// -------------------------------------------
 // combat stats
 public enum CombatStats
 {
@@ -127,8 +107,6 @@ public enum CombatStats
     Penetration,
     WeaponDamageTotal
 }
-// -------------------------------------------
-
 
 
 // -------------------------------------------
@@ -146,14 +124,12 @@ public enum ItemClasses
     Mission
 }
 // -------------------------------------------
-// -------------------------------------------
 // weapon damage
 public enum WeaponDamage
 {
     Melee,
     Ranged
 }
-// -------------------------------------------
 // -------------------------------------------
 // weapon types
 public enum WeaponTypes
@@ -169,7 +145,6 @@ public enum WeaponTypes
     HeavyWeapon
 }
 // -------------------------------------------
-// -------------------------------------------
 // weapon damage
 public enum ArmorTypes
 {
@@ -177,26 +152,6 @@ public enum ArmorTypes
     Medium,
     Heavy
 }
-// -------------------------------------------
-
-// -------------------------------------------
-// crime sentences
-public enum CrimeSentence
-{
-    None,
-    SoftFine,
-    MediumFine,
-    HardFine,
-    BrutalFine,
-    SoftArrest,
-    MediumArrest,
-    HardArrest,
-    BrutalArrest,
-    Execution
-}
-// -------------------------------------------
-
-
 // -------------------------------------------
 // quest trigger types
 public enum QuestTriggers
@@ -208,7 +163,6 @@ public enum QuestTriggers
     QuestEntrySuccess,
 }
 // -------------------------------------------
-// -------------------------------------------
 // quest clicker types
 public enum QuestClickers
 {
@@ -216,14 +170,12 @@ public enum QuestClickers
     Increment,
 }
 // -------------------------------------------
-// -------------------------------------------
 // attribute box types
 public enum AttributeBoxType
 {
     Attribute,
     Skill
 }
-// -------------------------------------------
 // -------------------------------------------
 // music cues
 public enum MusicCues
@@ -238,7 +190,6 @@ public enum MusicCues
     CombatOut
 }
 // -------------------------------------------
-// -------------------------------------------
 // audio cues
 public enum AudioCues
 {
@@ -248,7 +199,6 @@ public enum AudioCues
     Crate,
     Radio,
     Door,
-    Crime,
     Loot,
     Craft,
     Perception,
@@ -256,7 +206,6 @@ public enum AudioCues
     SkillCrate,
     SkillComputer
 }
-// -------------------------------------------
 // -------------------------------------------
 // idle animations
 public enum IdleAnimationType
@@ -287,7 +236,6 @@ public enum IdleAnimationType
     WalkingInCircle,
 }
 // -------------------------------------------
-// -------------------------------------------
 // death animations
 public enum DeathAnimationType
 {
@@ -295,14 +243,12 @@ public enum DeathAnimationType
     Specific
 }
 // -------------------------------------------
-// -------------------------------------------
 // crate type
 public enum CrateType
 {
     Random,
     Specific
 }
-// -------------------------------------------
 // -------------------------------------------
 // character portraits
 public enum CharacterPortraitType
@@ -314,7 +260,6 @@ public enum CharacterPortraitType
     Item,
     Character,
 }
-// -------------------------------------------
 // -------------------------------------------
 // combat actions
 public enum CombatActions
@@ -330,7 +275,6 @@ public enum CombatActions
     
 }
 // -------------------------------------------
-// -------------------------------------------
 // button type
 public enum ButtonType
 {
@@ -342,7 +286,6 @@ public enum ButtonType
     Journal
 }
 // -------------------------------------------
-// -------------------------------------------
 // game difficulty
 public enum GameDifficulty
 {
@@ -350,7 +293,6 @@ public enum GameDifficulty
     Medium,
     Hard,
 }
-// -------------------------------------------
 // -------------------------------------------
 // speech blurb type
 public enum SpeechBlurbType

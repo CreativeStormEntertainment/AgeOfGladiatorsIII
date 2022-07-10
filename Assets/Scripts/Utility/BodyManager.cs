@@ -19,7 +19,7 @@ public class BodyManager : MonoBehaviour
     public GameObject Melee1H;
 
 
-    // show weapon
+    
     public void ShowWeapon()
     {
         ResetAll();
@@ -37,7 +37,6 @@ public class BodyManager : MonoBehaviour
         }
     }
 
-    // hide weapon
     public void HideWeapon()
     {
         ResetAll();
@@ -45,7 +44,6 @@ public class BodyManager : MonoBehaviour
 
 
 
-    // reset all
     public void ResetAll()
     {
         Pistol.gameObject.SetActive(false);

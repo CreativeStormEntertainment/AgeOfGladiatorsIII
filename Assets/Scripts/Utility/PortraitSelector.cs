@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public static class PortraitSelector
 {
-    // find portrait
     public static Sprite FindPortrait(Character _Character, int _size)
     {
         // default image
@@ -86,8 +85,6 @@ public static class PortraitSelector
         return _ReturnImage;
     }
 
-
-    // find conversant portrait (special dialogue)
     public static Sprite FindPortrait(NPCSpecialNames _Name)
     {
         // default image

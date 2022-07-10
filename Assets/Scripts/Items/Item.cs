@@ -10,7 +10,6 @@ public class Item
 
 
 
-    // get portrait (virtual)
     public virtual Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = null;
@@ -18,7 +17,6 @@ public class Item
         return _ItemPortrait;
     }
 
-    // get item name (virtual)
     public virtual string GetItemName()
     {
         string _name = "";
@@ -26,7 +24,6 @@ public class Item
         return _name;
     }
 
-    // get item description (virtual)
     public virtual string GetItemDescription()
     {
         string _description = "";
@@ -34,7 +31,6 @@ public class Item
         return _description;
     }
 
-    // get item class description (virtual)
     public virtual string GetItemClassDescription()
     {
         string _description = "";
@@ -42,7 +38,6 @@ public class Item
         return _description;
     }
 
-    // calculate cost (virtual)
     public virtual int CalculateCost()
     {
         return 100;

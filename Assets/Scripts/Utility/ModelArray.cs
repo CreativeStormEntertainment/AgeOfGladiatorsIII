@@ -23,6 +23,8 @@ public class ModelArray : MonoBehaviour
     public GameObject[] JudgeFemaleBoots;
     public GameObject[] JudgeFemaleGloves;
 
+
+
     void Start()
     {
         if (instance == null)

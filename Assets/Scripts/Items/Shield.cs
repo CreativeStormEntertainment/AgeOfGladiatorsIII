@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Shield : Item
 {
-
-
-
-    // get shield portrait
     public override Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = null;

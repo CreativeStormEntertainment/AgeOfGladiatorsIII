@@ -6,15 +6,14 @@ public class Weapon : Item
 {
     public WeaponTypes WeaponType;
     public WeaponDamage WeaponDamageType;
-
     public int minDamage;
     public int maxDamage;
     public int hitChance;
     public int criticalChance;
     public float criticalDamage;
     public int penetration;
-
     public int ammo;
+
 
 
     public Weapon(WeaponTypes _weaponType, int _itemNumber)
@@ -33,7 +32,6 @@ public class Weapon : Item
 
 
 
-    // create weapon stats
     void CreateWeaponStats()
     {
         // ----------------
@@ -82,7 +80,6 @@ public class Weapon : Item
         }
     }
 
-    // pistol stats
     void PistolStats()
     {
         switch (itemNumber)
@@ -96,34 +93,28 @@ public class Weapon : Item
         }
     }
 
-    // shotgun stats
     void ShotgunStats()
     {
     }
 
-    // rifle stats
     void RifleStats()
     {
     }
 
-    // blade stats
     void BladeStats()
     {
     }
 
-    // blunt stats
     void BluntStats()
     {
     }
 
-    // heavy weapon stats
     void HeavyWeaponStats()
     {
     }
 
 
 
-    // get portrait (override)
     public override Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = null;
@@ -159,9 +150,6 @@ public class Weapon : Item
         return _ItemPortrait;
     }
 
-
-
-    // get item name (override)
     public override string GetItemName()
     {
         string _name = "";
@@ -197,7 +185,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // pistol names
     string PistolNames()
     {
         string _name = "";
@@ -218,7 +205,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // shotgun names
     string ShotgunNames()
     {
         string _name = "";
@@ -239,7 +225,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // rifle names
     string RifleNames()
     {
         string _name = "";
@@ -260,7 +245,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // heavy weapon names
     string HeavyWeaponNames()
     {
         string _name = "";
@@ -281,7 +265,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // blunt names
     string Blunt1HNames()
     {
         string _name = "";
@@ -302,7 +285,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // blade names
     string Blade1HNames()
     {
         string _name = "";
@@ -323,7 +305,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // blunt names
     string Blunt2HNames()
     {
         string _name = "";
@@ -344,7 +325,6 @@ public class Weapon : Item
         return _name;
     }
 
-    // blade names
     string Blade2HNames()
     {
         string _name = "";
@@ -365,9 +345,6 @@ public class Weapon : Item
         return _name;
     }
 
-
-
-    // get item description (override)
     public override string GetItemDescription()
     {
         string _description = "";
@@ -396,7 +373,6 @@ public class Weapon : Item
         return _description;
     }
 
-    // pistol descriptions
     string PistolDescriptions()
     {
         string _name = "";
@@ -417,9 +393,6 @@ public class Weapon : Item
         return _name;
     }
 
-
-
-    // get item class description (override)
     public override string GetItemClassDescription()
     {
         string _name = WeaponType.ToString();
@@ -429,7 +402,6 @@ public class Weapon : Item
 
 
 
-    // get range
     public int GetRange()
     {
         int _value = 0;
@@ -465,7 +437,6 @@ public class Weapon : Item
         return _value;
     }
 
-    // get action points
     public int GetActionPointsRequired()
     {
         int _value = 0;
@@ -497,7 +468,6 @@ public class Weapon : Item
 
 
 
-    // get maximum ammo
     public int GetMaximumAmmo()
     {
         int _ammo = 0;
@@ -521,7 +491,6 @@ public class Weapon : Item
         return _ammo;
     }
 
-    // check ammo
     public bool CheckIfAmmo()
     {
         bool _canAttack = true;
@@ -532,14 +501,12 @@ public class Weapon : Item
         return _canAttack;
     }
 
-    // deduct ammo
     public void DeductAmmo()
     {
         if (WeaponDamageType == WeaponDamage.Ranged)
             ammo--;
     }
 
-    // reload
     public void Reload()
     {
         ammo = GetMaximumAmmo();
@@ -547,7 +514,6 @@ public class Weapon : Item
 
 
 
-    // calculate cost (override)
     public override int CalculateCost()
     {
         int _cost = 0;

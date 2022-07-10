@@ -9,6 +9,8 @@ public class MouseClickCircle : MonoBehaviour
     [Header("Mouse Click Icon")]
     public SpriteRenderer MouseIcon;
 
+
+
     private void Awake()
     {
         if (instance == null)

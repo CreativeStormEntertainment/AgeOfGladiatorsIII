@@ -40,7 +40,6 @@ public class CameraRotate : MonoBehaviour
 
 
 
-    // standard rotates
     public void RotateLeft()
     {
         Vector3 _Jig = this.transform.position;
@@ -61,7 +60,6 @@ public class CameraRotate : MonoBehaviour
 
 
 
-    // mouse rotate
     public void CalcRotation()
     {
         mouseCurPos = Input.mousePosition;

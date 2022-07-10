@@ -4,7 +4,6 @@ using UnityEngine;
 
 public static class AudioFade
 {
-    // fade audio
     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
     {
         float currentTime = 0;

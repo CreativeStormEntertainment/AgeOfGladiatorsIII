@@ -8,6 +8,7 @@ public class MapIcon : MonoBehaviour
     public SpriteRenderer QuestIcon;
 
 
+
     public void ActivateIcon(bool _activate)
     {
         // -----------------------------

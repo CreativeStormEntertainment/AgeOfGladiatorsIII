@@ -44,7 +44,6 @@ public class VolumeChanger : MonoBehaviour
 
 
 
-    // set master volume
     public void SetVolume(float vol)
     {
         PlayerPrefs.SetFloat("masterVolume", vol);
@@ -52,7 +51,6 @@ public class VolumeChanger : MonoBehaviour
 
 
 
-    // set game volume
     public void SetGameVolume(float vol)
     {
         PlayerPrefs.SetFloat("gameSoundVolume", vol);
@@ -62,14 +60,12 @@ public class VolumeChanger : MonoBehaviour
         CombatAudio.volume = PlayerPrefs.GetFloat("gameSoundVolume");
     }
 
-    // set music volume
     public void SetMusicVolume(float vol)
     {
         PlayerPrefs.SetFloat("musicVolume", vol);
         MusicAudio.volume = PlayerPrefs.GetFloat("musicVolume");
     }
 
-    // set music cues volume
     public void SetMusicCueVolume(float vol)
     {
         PlayerPrefs.SetFloat("musicCuesVolume", vol);
@@ -77,7 +73,6 @@ public class VolumeChanger : MonoBehaviour
         MusicCuesAudio.volume = PlayerPrefs.GetFloat("musicCuesVolume");
     }
 
-    // set ui volume
     public void SetUIVolume(float vol)
     {
         PlayerPrefs.SetFloat("uiVolume", vol);
@@ -85,7 +80,6 @@ public class VolumeChanger : MonoBehaviour
        UIAudio.volume = PlayerPrefs.GetFloat("uiVolume");
     }
 
-    // check if multiple listeners
     public void CheckMultipleListeners()
     {
         if (Listener == null)

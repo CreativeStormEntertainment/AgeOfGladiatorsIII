@@ -7,6 +7,8 @@ public class APCostController : MonoBehaviour
     public RectTransform rt;
     public Camera cam;
 
+
+
     public void UpdateAP(Vector3 pos, float cost)
     {
         if (cam == null)
@@ -21,5 +23,4 @@ public class APCostController : MonoBehaviour
     {
         cam = Camera.main;
     }
-
 }

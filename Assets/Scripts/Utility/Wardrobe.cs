@@ -21,7 +21,6 @@ public class Wardrobe : MonoBehaviour
 
 
 
-    // dress model
     public void DressModel()
     {
         // hat
@@ -82,7 +81,6 @@ public class Wardrobe : MonoBehaviour
         }
     }
 
-    // replace part
     void ReplacePart(GameObject _Original, GameObject _Replacement)
     {
         _Replacement.transform.SetParent(this.transform, true);

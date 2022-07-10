@@ -11,7 +11,6 @@ public class AudioCue : MonoBehaviour
 
 
 
-    // play audio cue
     public void PlayCue()
     {
         if (MusicCueOnTrigger != MusicCues.None)

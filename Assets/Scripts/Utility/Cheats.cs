@@ -29,6 +29,8 @@ public class Cheats : MonoBehaviour
         }
     }
 
+
+
     void OpenMap()
     {
         WorldMap.instance.AreasUnlocked.Add(1);

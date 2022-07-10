@@ -43,7 +43,6 @@ public class Character3D : MonoBehaviour
 
 
 
-    // populate/instantiate model
     public void PopulateModel(bool _inventory, PlayerCharacter _SelectedCharacter)
     {
         inventory = _inventory;
@@ -110,7 +109,6 @@ public class Character3D : MonoBehaviour
         // -----------------------------
     }
 
-    // update portrait base model
     void UpdatePortraitBaseModel()
     {
         // (not sure why this needs to be in update, but the base sections will go back to active (after being deactivate) right after)
@@ -171,7 +169,6 @@ public class Character3D : MonoBehaviour
     
 
 
-    // show head view
     public void ShowHead()
     {
         if (headView)
@@ -186,7 +183,6 @@ public class Character3D : MonoBehaviour
         headView = true;
     }
 
-    // show body view
     public void ShowBody()
     {
         if (!headView)

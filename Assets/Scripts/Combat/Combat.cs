@@ -821,6 +821,8 @@ public class Combat : MonoBehaviour
         }
     }
 
+
+
     // show weapons
     void ShowWeapons()
     {

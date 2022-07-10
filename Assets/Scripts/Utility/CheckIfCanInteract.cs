@@ -5,7 +5,6 @@ using System.Linq;
 
 public static class CheckIfCanInteract
 {
-    // check for item conditions (map item)
     public static bool CheckForInteractableConditions(MapItem _Item)
     {
         bool _clear = true;
@@ -31,7 +30,6 @@ public static class CheckIfCanInteract
         return _clear;
     }
 
-    // check for item conditions (npc)
     public static bool CheckForInteractableConditions(NPC _NPC)
     {
         bool _clear = true;

@@ -15,7 +15,6 @@ public class FadeBlack : MonoBehaviour
 
 
 
-    // fade from black
     public IEnumerator ActivateFade()
     {
         //this.gameObject.SetActive(true);
@@ -23,7 +22,6 @@ public class FadeBlack : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    // fade from black (in and out)
     public IEnumerator ActivateFadeInOut()
     {
         //this.gameObject.SetActive(true);

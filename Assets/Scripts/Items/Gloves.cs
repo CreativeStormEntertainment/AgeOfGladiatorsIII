@@ -5,7 +5,6 @@ using UnityEngine;
 public class Gloves : Item
 {
     public ArmorTypes ArmorType;
-
     public int armor;
 
 
@@ -22,7 +21,6 @@ public class Gloves : Item
 
 
 
-    // create armor stat
     public void CreateArmorStat(ref int _stat)
     {
         switch (ArmorType)
@@ -41,7 +39,6 @@ public class Gloves : Item
 
 
 
-    // get portrait (override)
     public override Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = null;
@@ -62,9 +59,6 @@ public class Gloves : Item
         return _ItemPortrait;
     }
 
-
-
-    // get item name (override)
     public override string GetItemName()
     {
         string _name = "";
@@ -85,7 +79,6 @@ public class Gloves : Item
         return _name;
     }
 
-    // light names
     string LightNames()
     {
         string _name = "";
@@ -106,7 +99,6 @@ public class Gloves : Item
         return _name;
     }
 
-    // medium names
     string MediumNames()
     {
         string _name = "";
@@ -127,7 +119,6 @@ public class Gloves : Item
         return _name;
     }
 
-    // heavy names
     string HeavyNames()
     {
         string _name = "";
@@ -148,9 +139,6 @@ public class Gloves : Item
         return _name;
     }
 
-
-
-    // get item description (override)
     public override string GetItemDescription()
     {
         string _name = "Judge class hand armor designed to protect the fingers and thumbs. Small pouches for extra storage capacity.";
@@ -158,9 +146,6 @@ public class Gloves : Item
         return _name;
     }
 
-
-
-    // get item class description (override)
     public override string GetItemClassDescription()
     {
         string _name = ArmorType.ToString();
@@ -170,7 +155,6 @@ public class Gloves : Item
 
 
 
-    // calculate cost (override)
     public override int CalculateCost()
     {
         int _cost = 0;

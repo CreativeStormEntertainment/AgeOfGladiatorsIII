@@ -14,7 +14,6 @@ public class Accessory : Item
 
 
 
-    // get portrait (override)
     public override Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = PortraitImages.instance.AccessoryPortraits[itemNumber];
@@ -22,9 +21,6 @@ public class Accessory : Item
         return _ItemPortrait;
     }
 
-
-
-    // get item name (override)
     public override string GetItemName()
     {
         string _name = "Accessory";
@@ -32,7 +28,6 @@ public class Accessory : Item
         return _name;
     }
 
-    // get item class description (override)
     public override string GetItemClassDescription()
     {
         string _name = ItemClass.ToString();
@@ -42,7 +37,6 @@ public class Accessory : Item
 
 
 
-    // calculate cost (override)
     public override int CalculateCost()
     {
         int _cost = 1000;

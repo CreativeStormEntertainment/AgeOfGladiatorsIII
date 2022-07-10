@@ -22,13 +22,11 @@ public class NPCCombatController : MonoBehaviour
 
 
 
-    // combat actions
     public void StartActions()
     {
         StartCoroutine(ActionsCoroutine());
     }
 
-    // combat action timer
     public IEnumerator ActionsCoroutine()
     {
         // wait for action to end
@@ -57,7 +55,8 @@ public class NPCCombatController : MonoBehaviour
             CheckOtherActions();
     }
 
-    // select target
+
+
     void SelectTarget()
     {
         // -------------------------------------------
@@ -90,7 +89,6 @@ public class NPCCombatController : MonoBehaviour
         Debug.Log(Combat.instance.round + ": " + Combat.instance.Attacking.characterName + " is targeting " + Combat.instance.Defending.characterName);
     }
 
-    // move to target
     void MoveToTarget()
     {
         if (NPCAttached.combatActionPoints < 1)
@@ -178,7 +176,6 @@ public class NPCCombatController : MonoBehaviour
 
 
 
-    // other actions
     public void CheckOtherActions()
     {
 
@@ -191,7 +188,6 @@ public class NPCCombatController : MonoBehaviour
         StartCoroutine(WaitForActionToEnd());
     }
 
-    // waiting for actions to end
     public IEnumerator WaitForActionToEnd()
     {
         while (Combat.instance.waitingForActionToFinish)
@@ -202,7 +198,6 @@ public class NPCCombatController : MonoBehaviour
         CheckEndTurn();
     }
 
-    // check end turn
     public void CheckEndTurn()
     {
         //// check again if can attack (after reloading, ap recharging, etc...)
@@ -212,6 +207,16 @@ public class NPCCombatController : MonoBehaviour
         //    CombatActions();
 
         StartCoroutine(Combat.instance.EndTurnTimer());
+    }
+
+
+
+    bool CheckValidNPCForAttack()
+    {
+        if (!Combat.instance.combatActivated || NPCAttached.isDead || !Combat.instance.Attacking.playerControlledCombat || !NPCAttached.isHostile || Combat.instance.waitingForActionToFinish)
+            return false;
+        else
+            return true;
     }
 
 
@@ -238,14 +243,5 @@ public class NPCCombatController : MonoBehaviour
             return;
 
         Combat.instance.Defending = null;
-    }
-
-    // check if valid npc target
-    bool CheckValidNPCForAttack()
-    {
-        if (!Combat.instance.combatActivated || NPCAttached.isDead || !Combat.instance.Attacking.playerControlledCombat || !NPCAttached.isHostile || Combat.instance.waitingForActionToFinish)
-            return false;
-        else
-            return true;
     }
 }

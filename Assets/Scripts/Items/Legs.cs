@@ -3,7 +3,6 @@ using UnityEngine;
 public class Legs : Item
 {
     public ArmorTypes ArmorType;
-
     public int armor;
 
 
@@ -20,7 +19,6 @@ public class Legs : Item
 
 
 
-    // create armor stat
     public void CreateArmorStat(ref int _stat)
     {
         switch (ArmorType)
@@ -39,7 +37,6 @@ public class Legs : Item
 
 
 
-    // get portrait (override)
     public override Sprite GetItemPortrait()
     {
         Sprite _ItemPortrait = null;
@@ -60,9 +57,6 @@ public class Legs : Item
         return _ItemPortrait;
     }
 
-
-
-    // get item name (override)
     public override string GetItemName()
     {
         string _name = "";
@@ -83,7 +77,6 @@ public class Legs : Item
         return _name;
     }
 
-    // light names
     string LightNames()
     {
         string _name = "";
@@ -104,7 +97,6 @@ public class Legs : Item
         return _name;
     }
 
-    // medium names
     string MediumNames()
     {
         string _name = "";
@@ -125,7 +117,6 @@ public class Legs : Item
         return _name;
     }
 
-    // heavy names
     string HeavyNames()
     {
         string _name = "";
@@ -146,9 +137,6 @@ public class Legs : Item
         return _name;
     }
 
-
-
-    // get item description (override)
     public override string GetItemDescription()
     {
         string _name = "Judge class leg armor designed to protect the groin and lower extremities.";
@@ -156,9 +144,6 @@ public class Legs : Item
         return _name;
     }
 
-
-
-    // get item class description (override)
     public override string GetItemClassDescription()
     {
         string _name = ArmorType.ToString();
@@ -168,7 +153,6 @@ public class Legs : Item
 
 
 
-    // calculate cost (override)
     public override int CalculateCost()
     {
         int _cost = 0;

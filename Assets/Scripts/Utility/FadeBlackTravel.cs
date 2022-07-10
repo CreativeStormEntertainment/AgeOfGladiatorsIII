@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FadeBlackTravel : MonoBehaviour
 {
-    // fade from black
     public IEnumerator ActivateFadeTravel()
     {
         yield return new WaitForSeconds(5f);
