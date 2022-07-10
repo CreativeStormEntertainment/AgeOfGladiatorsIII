@@ -7827,7 +7827,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("SoftFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7902,7 +7902,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("MediumFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7977,7 +7977,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("HardFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8052,7 +8052,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("BrutalFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8214,7 +8214,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 537.81226
+        x: 539.03174
         y: 530.9374
         width: 160
         height: 30
@@ -8283,7 +8283,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 537.81226
+        x: 539.03174
         y: 580.9374
         width: 160
         height: 30
