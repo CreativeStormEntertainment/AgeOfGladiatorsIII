@@ -67,5 +67,7 @@ Material:
     - DarknessBC: 0.21
     - RoughnessControl: 0.96
     - Saturation: 0.98
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors: []
   m_BuildTextureStacks: []
