@@ -626,7 +626,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_QuestState
     - title: Entry 1
-      value: Receive your instructions.
+      value: '[var=streetPatrolChecks]/5 Located.'
       type: 0
       typeString: CustomFieldType_Text
     - title: 
@@ -636,11 +636,11 @@ MonoBehaviour:
     - title: Entry 2 State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 2
-      value: Check or speak with three citizens.
+      value: Report back to your terminal.
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
   - id: 1
     fields:
     - title: Name
@@ -719,7 +719,21 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Name
-      value: itemFound
+      value: itemsFound
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 3
+    fields:
+    - title: Name
+      value: streetPatrolChecks
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
@@ -7813,7 +7827,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("SoftFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7888,7 +7902,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("MediumFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7963,7 +7977,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("HardFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8038,7 +8052,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Crime("BrutalFine")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8200,7 +8214,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 537.81226
+        x: 539.03174
         y: 530.9374
         width: 160
         height: 30
@@ -8269,7 +8283,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 537.81226
+        x: 539.03174
         y: 580.9374
         width: 160
         height: 30
@@ -17080,7 +17094,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: GangsterApe(0)
+      userScript: 'AggroNPC("Gangster Ape");
+
+        AggroNPC("Ape Thug");
+
+        AggroNPC("Ape
+        Henchman");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17608,8 +17627,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: EventScreenTrigger("DiseaseApes"); AdvanceQuest("You Bet Your Life",
-        6)
+      userScript: "EventScreenTrigger(\"DiseaseApes\"); \nAdvanceQuest(\"You Bet
+        Your Life\", 6)"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17829,8 +17848,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: EventScreenTrigger("FleeApes"); AdvanceQuest("You Bet Your Life",
-        6)
+      userScript: "EventScreenTrigger(\"FleeApes\"); \nAdvanceQuest(\"You Bet Your
+        Life\", 6)"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17900,7 +17919,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: GangsterApe(0)
+      userScript: 'AggroNPC("Gangster Ape");
+
+        AggroNPC("Ape Thug");
+
+        AggroNPC("Ape
+        Henchman");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18286,7 +18310,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: GangsterApe(0)
+      userScript: 'AggroNPC("Gangster Ape");
+
+        AggroNPC("Ape Thug");
+
+        AggroNPC("Ape
+        Henchman");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18560,8 +18589,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: <color=#ffc149>[Hostile]</color> "You've been such great mimics of
-          humans. It was only a matter of time before some of you would imitate criminals."
+        value: '"You''ve been such great mimics of humans. It was only a matter of
+          time before some of you would imitate criminals."'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -18595,7 +18624,7 @@ MonoBehaviour:
       - originConversationID: 11
         originDialogueID: 34
         destinationConversationID: 11
-        destinationDialogueID: 40
+        destinationDialogueID: 36
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -18606,7 +18635,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2512.2705
-        y: 375.3895
+        y: 374.3895
         width: 160
         height: 30
     - id: 35
@@ -18668,7 +18697,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: GangsterApe(0)
+      userScript: 'AggroNPC("Gangster Ape");
+
+        AggroNPC("Ape Thug");
+
+        AggroNPC("Ape
+        Henchman");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18971,14 +19005,19 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: GangsterApe(0)
+      userScript: 'AggroNPC("Gangster Ape");
+
+        AggroNPC("Ape Thug");
+
+        AggroNPC("Ape
+        Henchman");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 2509.888
-        y: 530.1365
+        y: 528.87067
         width: 160
         height: 30
     - id: 41
@@ -19040,8 +19079,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: EventScreenTrigger("PeaceApes"); AdvanceQuest("You Bet Your Life",
-        6)
+      userScript: "EventScreenTrigger(\"PeaceApes\"); \nAdvanceQuest(\"You Bet Your
+        Life\", 6)"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19110,8 +19149,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: EventScreenTrigger("PeaceApes"); AdvanceQuest("You Bet Your Life",
-        6)
+      userScript: "EventScreenTrigger(\"PeaceApes\"); \nAdvanceQuest(\"You Bet Your
+        Life\", 6)"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19180,19 +19219,24 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: GangsterApe(0)
+      userScript: 'AggroNPC("Gangster Ape");
+
+        AggroNPC("Ape Thug");
+
+        AggroNPC("Ape
+        Henchman");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1797.6592
+        x: 1798.6902
         y: 536.3934
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 701.41406, y: 3.46379}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 252.90689, y: 25.744064}
+    canvasZoom: 0.7900002
   - id: 12
     fields:
     - title: Title
@@ -19538,7 +19582,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Show Invalid
-        value: True
+        value: False
         type: 2
         typeString: CustomFieldType_Boolean
       conversationID: 12
@@ -19555,7 +19599,10 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: GetSkill("Engineering") >= 3 or Dialog[7].SimStatus ~= "WasDisplayed"
+      conditionsString: '(GetSkill("Engineering") >= 3) and
+
+        (Dialog[7].SimStatus
+        ~= "WasDisplayed")'
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19614,7 +19661,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Show Invalid
-        value: True
+        value: False
         type: 2
         typeString: CustomFieldType_Boolean
       conversationID: 12
@@ -19631,14 +19678,17 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: GetSkill("StreetSmarts") >= 3 or Dialog[8].SimStatus ~= "WasDisplayed"
+      conditionsString: '(GetSkill("StreetSmarts") >= 3) and
+
+        (Dialog[8].SimStatus
+        ~= "WasDisplayed")'
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 557.358
+        x: 558.10986
         y: 212.79099
         width: 160
         height: 30
@@ -20018,8 +20068,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 557.8709
-        y: 319.57123
+        x: 448.84833
+        y: 317.31558
         width: 160
         height: 30
     - id: 10
@@ -20311,8 +20361,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 264.71375, y: 8.541446}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 289.99734, y: 0}
+    canvasZoom: 1
   - id: 13
     fields:
     - title: Title
@@ -21337,7 +21387,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: BabyBobNicely(0)
+      userScript: 'AggroNPC("Baby Bob Nicely");
+
+        AggroNPC("Tech");
+
+        AggroNPC("Camera
+        Operator");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21576,8 +21631,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 782.4974
-        y: 710.3977
+        x: 659.3266
+        y: 670.1538
         width: 160
         height: 30
     - id: 17
@@ -25822,7 +25877,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: BabyBobNicely(0)
+      userScript: 'AggroNPC("Baby Bob Nicely");
+
+        AggroNPC("Tech");
+
+        AggroNPC("Camera
+        Operator");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26115,8 +26175,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 415.83932, y: 931.48834}
-    canvasZoom: 0.69999987
+    canvasScrollPosition: {x: 651.4265, y: 471.4995}
+    canvasZoom: 0.55
   - id: 14
     fields:
     - title: Title
@@ -27359,13 +27419,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: StartQuest("Future Shock")
+      userScript: "StartQuest(\"Future Shock\"); \nShowWeapon()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 820.1277
+        x: 821.49756
         y: 94.73685
         width: 160
         height: 30
@@ -27735,7 +27795,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: TimLuna(0)
+      userScript: "KillNPC(\"Linda Dooley\", 0);\nPlayAttackPlayer(); \nPlayDeathFemale()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29762,7 +29822,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: TimLuna(1)
+      userScript: "KillNPC(\"Tim Luna\", 3);\r\nPlayAttackPlayer(); \r\nPlayDeathMale()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -29913,7 +29973,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: TimLuna(1)
+      userScript: "KillNPC(\"Tim Luna\", 3);\nPlayAttackPlayer(); \nPlayDeathMale()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30220,7 +30280,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: TimLuna(1); TimLuna(0);
+      userScript: "KillNPC(\"Tim Luna\", 3);\r\nKillNPC(\"Linda Dooley\", 0);\r\nPlayAttackPlayer();
+        \r\nPlayDeathMale();\nPlayDeathFemale()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30672,7 +30733,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: TimLuna(1)
+      userScript: "KillNPC(\"Tim Luna\", 3);\nPlayAttackPlayer(); \nPlayDeathMale()"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -31045,8 +31106,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 169.47937, y: 108.017914}
-    canvasZoom: 0.76000035
+    canvasScrollPosition: {x: 729.449, y: 48.21161}
+    canvasZoom: 0.7300004
   - id: 16
     fields:
     - title: Title

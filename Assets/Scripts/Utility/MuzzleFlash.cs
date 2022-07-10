@@ -11,7 +11,8 @@ public class MuzzleFlash : MonoBehaviour
 
     private void Start()
     {
-        MuzzleBurst.gameObject.SetActive(false);
+        if (MuzzleBurst != null)
+            MuzzleBurst.gameObject.SetActive(false);
     }
 
 
